@@ -3,7 +3,8 @@
 -- Keybinds
 hl.bind("SUPER + w",                   hl.dsp.exec_cmd("zen"))
 hl.bind("SUPER + e",                   hl.dsp.exec_cmd("thunar"))
-hl.bind("SUPER + T",                   hl.dsp.exec_cmd("kitty"))
+hl.bind("SUPER + t",                   hl.dsp.exec_cmd("kitty"))
+hl.bind("SUPER + m",                   hl.dsp.exec_cmd("feishin"))
 
 
 -- Vim bind anywhere 
