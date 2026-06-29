@@ -3,6 +3,7 @@ import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 import "modules/Workspaces"
+import "modules/CPU"
 
 PanelWindow {
   id: rootbar
@@ -23,5 +24,7 @@ PanelWindow {
     Workspaces {}
 
     Item { Layout.fillWidth: true }
+
+    CPU {}
   }
 }
