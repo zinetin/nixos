@@ -4,6 +4,7 @@ import QtQuick
 import QtQuick.Layouts
 import "modules/Workspaces"
 import "modules/CPU"
+import "modules/Clock"
 
 PanelWindow {
   id: rootbar
