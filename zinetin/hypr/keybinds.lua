@@ -1,5 +1,3 @@
-
-
 -- Keybinds
 hl.bind("SUPER + w",                   hl.dsp.exec_cmd("zen"))
 hl.bind("SUPER + e",                   hl.dsp.exec_cmd("thunar"))
@@ -8,11 +6,11 @@ hl.bind("SUPER + m",                   hl.dsp.exec_cmd("feishin"))
 
 
 -- Vim bind anywhere 
-hl.bind("SUPER + h",                   hl.dsp.send_shortcut({ mods = "", key = "left", window = "activewindow" }))
-hl.bind("SUPER + j",                   hl.dsp.send_shortcut({ mods = "", key = "down", window = "activewindow" }))
-hl.bind("SUPER + k",                   hl.dsp.send_shortcut({ mods = "", key = "up", window = "activewindow" }))
-hl.bind("SUPER + l",                   hl.dsp.send_shortcut({ mods = "", key = "right", window = "activewindow" }))
-hl.bind("SUPER + x",                   hl.dsp.send_shortcut({ mods = "", key = "backspace", window = "activewindow" }))
+hl.bind("ALT_R + h",                   hl.dsp.send_shortcut({ mods = "", key = "left", window = "activewindow" }))
+hl.bind("ALT_R + j",                   hl.dsp.send_shortcut({ mods = "", key = "down", window = "activewindow" }))
+hl.bind("ALT_R + k",                   hl.dsp.send_shortcut({ mods = "", key = "up", window = "activewindow" }))
+hl.bind("ALT_R + l",                   hl.dsp.send_shortcut({ mods = "", key = "right", window = "activewindow" }))
+hl.bind("ALT_R + x",                   hl.dsp.send_shortcut({ mods = "", key = "backspace", window = "activewindow" }))
 
 -- Media control
 hl.bind("SUPER + CONTROL + 5",         hl.dsp.exec_cmd("playerctl previous"))
@@ -42,10 +40,13 @@ hl.bind("SUPER + SHIFT + F",           hl.dsp.window.fullscreen({mode = "maximiz
 hl.bind("SUPER + Q",                   hl.dsp.window.close())
 
 for i = 1, 4 do
-  local arrowkey = { "Left", "Right", "Up", "Down"}
-  local focusdir = { "l",    "r",     "u",  "d"}
+  local arrowkey =  { "Left", "Right", "Up", "Down"}
+  local vimrowkey = { "h",    "l",     "k",  "j"}
+  local focusdir =  { "l",    "r",     "u",  "d"}
   hl.bind("SUPER + CONTROL + " .. arrowkey[i], hl.dsp.focus({direction = focusdir[i]}))
+  hl.bind("SUPER + CONTROL + " .. vimrowkey[i], hl.dsp.focus({direction = focusdir[i]}))
   hl.bind("SUPER + CONTROL + SHIFT + " .. arrowkey[i], hl.dsp.window.move({direction = focusdir[i]}))
+  hl.bind("SUPER + CONTROL + SHIFT + " .. vimrowkey[i], hl.dsp.window.move({direction = focusdir[i]}))
 end
 
 for i = 0, 9 do
