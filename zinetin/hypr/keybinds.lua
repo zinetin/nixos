@@ -6,11 +6,11 @@ hl.bind("SUPER + m",                   hl.dsp.exec_cmd("feishin"))
 
 
 -- Vim bind anywhere 
-hl.bind("ALT_R + h",                   hl.dsp.send_shortcut({ mods = "", key = "left", window = "activewindow" }))
-hl.bind("ALT_R + j",                   hl.dsp.send_shortcut({ mods = "", key = "down", window = "activewindow" }))
-hl.bind("ALT_R + k",                   hl.dsp.send_shortcut({ mods = "", key = "up", window = "activewindow" }))
-hl.bind("ALT_R + l",                   hl.dsp.send_shortcut({ mods = "", key = "right", window = "activewindow" }))
-hl.bind("ALT_R + x",                   hl.dsp.send_shortcut({ mods = "", key = "backspace", window = "activewindow" }))
+hl.bind("ALT + ALT_R + h",                     hl.dsp.send_shortcut({ mods = "", key = "left", window = "activewindow" }))
+hl.bind("ALT + ALT_R + j",                     hl.dsp.send_shortcut({ mods = "", key = "down", window = "activewindow" }))
+hl.bind("ALT + ALT_R + k",                     hl.dsp.send_shortcut({ mods = "", key = "up", window = "activewindow" }))
+hl.bind("ALT + ALT_R + l",                     hl.dsp.send_shortcut({ mods = "", key = "right", window = "activewindow" }))
+hl.bind("ALT + ALT_R + x",                     hl.dsp.send_shortcut({ mods = "", key = "backspace", window = "activewindow" }))
 
 -- Media control
 hl.bind("SUPER + CONTROL + 5",         hl.dsp.exec_cmd("playerctl previous"))

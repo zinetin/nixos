@@ -32,8 +32,8 @@
 
   # Cursor theme
   home.pointerCursor = {
-    name = "Adwaita";
-    package = pkgs.adwaita-icon-theme;
+    name = "Breeze";
+    pkgs.breeze-icons
     size = 24;
     gtk.enable = true;
     x11.enable = true;
@@ -44,4 +44,10 @@
     GTK_THEME = "Adwaita:dark";
     QT_QPA_PLATFORMTHEME = "gtk3";
   };
+
+  dconf.settings = {
+    "org/gnome/gedit/preferences/editor" = {
+      scheme = "Solarized Dark"
+    }
+  }
 }

@@ -6,6 +6,10 @@
     feishin
     thunar
     quickshell
+    gedit
+    jetbrains-mono
+    breeze-icons
+    gedit-plugins
     pulseaudio
     bluetui
     wl-clipboard
