@@ -5,6 +5,7 @@ import QtQuick.Layouts
 import "modules/Workspaces"
 import "modules/CPU"
 import "modules/Clock"
+import "modules/Memory"
 
 PanelWindow {
   id: rootbar
@@ -27,6 +28,9 @@ PanelWindow {
     Item { Layout.fillWidth: true }
 
     CPU {}
+
+    Memory {}
+
     Clock{}
   }
 }

@@ -12,7 +12,7 @@ RowLayout {
 
   Text {
     text: "CPU"
-    color: root.colFg
+    color: root.colBlue
     font {
       family: root.fontFamily
       pixelSize: root.fontSize

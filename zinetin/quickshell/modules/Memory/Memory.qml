@@ -6,13 +6,11 @@ import QtQuick.Layouts
 RowLayout {
   spacing: 6
 
-  id: clock
-
-  property string timeText: "Hi"
+  property string memText: ""
 
   Text {
-    text: clock.timeText
-    color: root.colWhite
+    text: "Mem: " + parent.memText + "%"
+    color: root.colCyan
     font {
       family: root.fontFamily
       pixelSize: root.fontSize
@@ -20,18 +18,22 @@ RowLayout {
     }
   }
 
+
   Process {
-    id: dateProc
-    command: ["date", "+%A %d %B %H:%M:%S %Y"]
+    id: memProc
+    command: ["sh", "-c", "free | awk '/^Mem:/{printf \"%.0f\", 100*$3/$2}'"]
+
     stdout: StdioCollector {
-      onStreamFinished: clock.timeText = this.text.trim()
+      onStreamFinished: {
+        memText = text.trim() 
+      }
     }
   }
 
   Timer {
-    interval: 1000
+    interval: 2000
     running: true
     repeat: true
-    onTriggered: dateProc.running = true
+    onTriggered: memProc.running = true
   }
 }
