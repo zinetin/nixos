@@ -26,5 +26,6 @@ PanelWindow {
     Item { Layout.fillWidth: true }
 
     CPU {}
+    Clock{}
   }
 }

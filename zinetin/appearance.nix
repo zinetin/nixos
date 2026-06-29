@@ -32,8 +32,8 @@
 
   # Cursor theme
   home.pointerCursor = {
-    name = "Breeze";
-    pkgs.breeze-icons
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
     size = 24;
     gtk.enable = true;
     x11.enable = true;
@@ -47,7 +47,7 @@
 
   dconf.settings = {
     "org/gnome/gedit/preferences/editor" = {
-      scheme = "Solarized Dark"
-    }
-  }
+      scheme = "Solarized Dark";
+    };
+  };
 }
