@@ -1,4 +1,4 @@
-{config, pkgs, ...}
+{config, pkgs, ...}:
 
 {
   programs.quickshell = {
@@ -6,6 +6,7 @@
   };
 
   xdg.configFile."quickshell" = {
-    source = ./default.qml;
+    source = ./quickshell;
+    recursive = true;
   };
 }
