@@ -21,9 +21,14 @@
   
   programs.ssh = {
     enable = true;
-    addKeysToAgent = "yes";
-    matchBlocks."github.com" = {
-      identityFile = "~/.ssh/github";
+    enableDefaultConfig = false;
+    settings = {
+      "github.com" = {
+        HostName = "github.com";
+        User = "git";
+        IdentityFile = "~/.ssh/github";
+        AddKeysToAgent = "yes";
+      };
     };
   };
 
