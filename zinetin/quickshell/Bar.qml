@@ -7,7 +7,7 @@ import "modules/Workspaces"
 PanelWindow {
   id: rootbar
 
-  anchors = {
+  anchors {
     top: true
     left: true
     right: true

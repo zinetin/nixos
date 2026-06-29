@@ -7,7 +7,7 @@ RowLayout {
   Repeater {
     model: {
       let workspaces = Hyprland.workspaces.values;
-      return workspaces.sort((a, b) => a.id - b.id );
+      return [...workspaces].sort((a, b) => a.id - b.id);
     }
 
     Text {
@@ -15,7 +15,7 @@ RowLayout {
       property bool isActive: Hyprland.focusedWorkspace?.id === ws.id
 
       text: ws.name.startsWith("special: ") ? ws.name.replace("speical: ", "s") : ws.id
-      color: isActive ? root.colYellow : root.colBlue
+      color: isActive ? root.colBlue : root.colMuted
 
       font {
         pixelSize: root.fontSize

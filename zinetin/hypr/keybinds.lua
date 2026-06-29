@@ -26,24 +26,27 @@ hl.bind("SUPER + CONTROL + 0",         hl.dsp.exec_cmd("pactl set-sink-volume @D
 -- Screenshots
 local screenshot_dir = os.getenv("HOME") .. "Pictures/Screenshots"
 
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd(
-    "grimblast --notify copysave area " .. screenshot_dir .. "/$(date +%Y%m%d-%H%M%S).png"
-))
+hl.bind("SUPER + SHIFT + S",           hl.dsp.exec_cmd("grimblast --notify copysave area " .. screenshot_dir .. "/$(date +%Y%m%d-%H%M%S).png"))
 
-hl.bind("CTRL + SUPER + SHIFT + S", hl.dsp.exec_cmd([[
-    bash -c 'FILE="$HOME/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S).png"; grimblast save area - | satty --filename - --output-filename "$FILE" && wl-copy < "$FILE" && notify-send "Screenshot saved" "$FILE"'
-]]))
+hl.bind("CTRL + SUPER + SHIFT + S",    hl.dsp.exec_cmd([[bash -c 'FILE="$HOME/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S).png"; grimblast save area - | satty --filename - --output-filename "$FILE" && wl-copy < "$FILE" && notify-send "Screenshot saved" "$FILE"']]))
 
-hl.bind("Print", hl.dsp.exec_cmd(
-    "grimblast --notify copysave output " .. screenshot_dir .. "/$(date +%Y%m%d-%H%M%S).png"
-))
+hl.bind("Print",                       hl.dsp.exec_cmd("grimblast --notify copysave output " .. screenshot_dir .. "/$(date +%Y%m%d-%H%M%S).png"))
 
-hl.bind("CTRL + Print", hl.dsp.exec_cmd([[
-    bash -c 'FILE="$HOME/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S).png"; grimblast save output - | satty --filename - --output-filename "$FILE" && wl-copy < "$FILE" && notify-send "Screenshot saved" "$FILE"'
-]]))
+hl.bind("CTRL + Print",                hl.dsp.exec_cmd([[ bash -c 'FILE="$HOME/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S).png"; grimblast save output - | satty --filename - --output-filename "$FILE" && wl-copy < "$FILE" && notify-send "Screenshot saved" "$FILE"' ]]))
 
--- windows
+-- Workspace and Window Management
+
+hl.bind("SUPER + F",                   hl.dsp.window.fullscreen({mode = "fullscreen", action = "toggle"}))
+hl.bind("SUPER + SHIFT + F",           hl.dsp.window.fullscreen({mode = "maximized", action = "toggle"}))
+
 hl.bind("SUPER + Q",                   hl.dsp.window.close())
+
+for i = 1, 4 do
+  local arrowkey = { "Left", "Right", "Up", "Down"}
+  local focusdir = { "l",    "r",     "u",  "d"}
+  hl.bind("SUPER + CONTROL + " .. arrowkey[i], hl.dsp.focus({direction = focusdir[i]}))
+  hl.bind("SUPER + CONTROL + SHIFT + " .. arrowkey[i], hl.dsp.window.move({direction = focusdir[i]}))
+end
 
 for i = 0, 9 do
   hl.bind("SUPER + " .. i,  function()
