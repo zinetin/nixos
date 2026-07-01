@@ -6,7 +6,7 @@
   };
 
   xdg.configFile."quickshell" = {
-    source = ./config";
+    source = ./config;
     recursive = true;
   };
 }
