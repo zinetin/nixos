@@ -9,6 +9,7 @@
       ./packages.nix
       ./services.nix
       ./appearance.nix
+      ./users.nix
     ];
 
   boot.loader = {
@@ -43,16 +44,14 @@
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
-  # User
-  security.sudo.wheelNeedsPassword = false;
-  users.users.zinetin = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "input" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-    ];
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
   };
 
+  # User
+  security.sudo.wheelNeedsPassword = false;
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
