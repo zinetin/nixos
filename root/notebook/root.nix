@@ -7,10 +7,7 @@
     [
       ./hardware-configuration.nix
 
-      ../common/packages.nix
-      ../common/services.nix
-      ../common/appearance.nix
-      ../common/users.nix
+      ../common/configuration.nix
     ];
 
   boot.loader = {
@@ -23,36 +20,8 @@
     efi.efiSysMountPoint = "/boot/efi";
   };
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "z-notebook"; # Define your hostname.
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/London";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
-  console = {
-    keyMap = "us";
-  };
-
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-  };
-
-  # User
-  security.sudo.wheelNeedsPassword = false;
-  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
