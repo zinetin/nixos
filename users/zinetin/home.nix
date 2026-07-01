@@ -4,10 +4,10 @@
   imports = 
   [
     ./hypr/hyprland.nix
+    ./quickshell/quickshell.nix
     ./appearance.nix
     ./nv-chad.nix
     ./packages.nix
-    ./quickshell.nix
   ];
   home.username = "zinetin";
   home.homeDirectory = "/home/zinetin";
