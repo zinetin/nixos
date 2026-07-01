@@ -2,12 +2,13 @@
 
 {
   # Import other files in common to keep root.nix clean
-  include [
+  imports = 
+  [
     ./appearance.nix
     ./packages.nix
     ./services.nix
     ./users.nix
-  ]
+  ];
 
   # Use Latest Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;

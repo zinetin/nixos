@@ -27,7 +27,7 @@
   	        home-manager = {
   	          useGlobalPkgs = true;
   	          useUserPackages = true;
-  	          users.zinetin = import ./zinetin/home.nix;
+  	          users.zinetin = import ./users/zinetin/home.nix;
               extraSpecialArgs = { inherit inputs; };
   	        };
         	}
@@ -44,7 +44,7 @@
   	        home-manager = {
   	          useGlobalPkgs = true;
   	          useUserPackages = true;
-  	          users.zinetin = import ./zinetin/home.nix;
+  	          users.zinetin = import ./users/zinetin/home.nix;
               extraSpecialArgs = { inherit inputs; };
   	        };
         	}
