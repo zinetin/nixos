@@ -7,7 +7,7 @@
     thunar
     quickshell
     gedit
-    jetbrains-mono
+    nerd-fonts.jetbrains-mono
     pulseaudio
     bluetui
     wl-clipboard

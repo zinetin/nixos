@@ -6,10 +6,10 @@ import QtQuick.Layouts
 RowLayout {
   spacing: 6
 
-  property string memText: ""
+  property string memText: "0"
 
   Text {
-    text: "Mem: " + parent.memText + "%"
+    text: "  " + parent.memText + "%"
     color: root.colCyan
     font {
       family: root.fontFamily

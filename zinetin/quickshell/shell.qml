@@ -14,6 +14,7 @@ ShellRoot {
   property color colBlue: "#7aa2f7"
   property color colYellow: "#e1e368"
   property color colWhite: "#F0F0F0"
+  property color colRed: "#d42020"
   property string fontFamily: "JetBrainsMono Nerd Font"
   property int fontSize: 14
 

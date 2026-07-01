@@ -6,6 +6,7 @@ import "modules/Workspaces"
 import "modules/CPU"
 import "modules/Clock"
 import "modules/Memory"
+import "modules/Battery"
 
 PanelWindow {
   id: rootbar
@@ -13,24 +14,25 @@ PanelWindow {
   anchors {
     top: true
     left: true
-    right: true
+    bottom: true
   }
 
-  implicitHeight: 30
   color: root.colBg
 
-  RowLayout {
+  ColumnLayout {
     anchors.fill: parent
     anchors.margins: 8
 
     Workspaces {}
 
-    Item { Layout.fillWidth: true }
+    Item { Layout.fillHeight: true }
 
     CPU {}
 
     Memory {}
 
-    Clock{}
+    Battery {}
+    
+    Clock {}
   }
 }

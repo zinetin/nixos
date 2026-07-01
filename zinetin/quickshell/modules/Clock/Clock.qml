@@ -8,23 +8,63 @@ RowLayout {
 
   id: clock
 
-  property string timeText: "Hi"
+  property string day: ""
+  property string thisdate: ""
+  property string thistime: ""
 
-  Text {
-    text: clock.timeText
-    color: root.colWhite
-    font {
-      family: root.fontFamily
-      pixelSize: root.fontSize
-      bold: true
+  ColumnLayout {
+    Text {
+      text: clock.day
+      color: root.colWhite
+      font {
+        family: root.fontFamily
+        pixelSize: root.fontSize
+        bold: true
+      }
+    }
+
+    Text {
+      text: clock.thisdate
+      color: root.colWhite
+      font {
+        family: root.fontFamily
+        pixelSize: root.fontSize
+        bold: true
+      }
+    }
+
+    Text {
+      text: clock.thistime
+      color: root.colWhite
+      font {
+        family: root.fontFamily
+        pixelSize: root.fontSize
+        bold: true
+      }
+    }
+  }
+ 
+  Process {
+    id: dayProc
+    command: ["date", "+%A"]
+    stdout: StdioCollector {
+      onStreamFinished: clock.day = this.text.trim()
     }
   }
 
   Process {
     id: dateProc
-    command: ["date", "+%A %d %B %H:%M:%S %Y"]
+    command: ["date", "+%D"]
     stdout: StdioCollector {
-      onStreamFinished: clock.timeText = this.text.trim()
+      onStreamFinished: clock.thisdate = this.text.trim()
+    }
+  }
+
+  Process {
+    id: timeProc
+    command: ["date", "+%T"]
+    stdout: StdioCollector {
+      onStreamFinished: clock.thistime = this.text.trim()
     }
   }
 
@@ -32,6 +72,10 @@ RowLayout {
     interval: 1000
     running: true
     repeat: true
-    onTriggered: dateProc.running = true
+    onTriggered: {
+      dayProc.running = true
+      dateProc.running = true
+      timeProc.running = true
+    }
   }
 }

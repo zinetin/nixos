@@ -3,7 +3,7 @@ import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 
-RowLayout {
+ColumnLayout {
   Repeater {
     model: {
       let workspaces = Hyprland.workspaces.values;

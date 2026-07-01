@@ -11,7 +11,7 @@ RowLayout {
   property real lastCpuIdle: 0
 
   Text {
-    text: "CPU"
+    text: "  "
     color: root.colBlue
     font {
       family: root.fontFamily
