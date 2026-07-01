@@ -11,7 +11,7 @@
   };
 
   users.users.testing = {
-    isNormalUser = "true";
+    isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "input" "docker" ];
   };
 }
