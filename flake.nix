@@ -15,21 +15,41 @@
   };
   
   outputs = {self, nixpkgs, home-manager, zen-browser, ...} @inputs: {
-    nixosConfigurations.notebook = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./root/root.nix
-	home-manager.nixosModules.home-manager
-        {
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    users.zinetin = import ./zinetin/home.nix;
-      extraSpecialArgs = { inherit inputs; };
-	  };
-	}
-      ];
+
+    # Bad ASUS notebook laptop
+    nixosConfigurations = {
+      notebook = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./root/notebook/root.nix
+  	      home-manager.nixosModules.home-manager {
+  	        home-manager = {
+  	          useGlobalPkgs = true;
+  	          useUserPackages = true;
+  	          users.zinetin = import ./zinetin/home.nix;
+              extraSpecialArgs = { inherit inputs; };
+  	        };
+        	}
+        ];
+      };
+
+      # GAMING laptop - Acer nitro an515-56
+      nitro = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./root/nitro/root.nix
+  	      home-manager.nixosModules.home-manager {
+  	        home-manager = {
+  	          useGlobalPkgs = true;
+  	          useUserPackages = true;
+  	          users.zinetin = import ./zinetin/home.nix;
+              extraSpecialArgs = { inherit inputs; };
+  	        };
+        	}
+        ];
+      };
     };
   };
 }
