@@ -6,10 +6,11 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./packages.nix
-      ./services.nix
-      ./appearance.nix
-      ./users.nix
+
+      ../common/packages.nix
+      ../common/services.nix
+      ../common/appearance.nix
+      ../common/users.nix
     ];
 
   boot.loader = {
