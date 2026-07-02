@@ -16,7 +16,8 @@
     python3
     bash
     p7zip
-    wine
+    wineWow64Packages.stable
+    bottles
   ];
   programs = {
     hyprland.enable = true;

@@ -12,6 +12,7 @@
 
   # Use Latest Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.supportedFilesystem = [ "ntfs" ]
   
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
