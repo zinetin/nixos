@@ -15,6 +15,8 @@
     os-prober
     python3
     bash
+    p7zip
+    wine
   ];
   programs = {
     hyprland.enable = true;
