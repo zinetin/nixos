@@ -5,6 +5,7 @@
   [
     ./hypr/hyprland.nix
     ./quickshell/quickshell.nix
+    ./zen.nix
     ./appearance.nix
     ./nv-chad.nix
     ./packages.nix

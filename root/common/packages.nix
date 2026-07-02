@@ -13,6 +13,8 @@
     curl
     pulseaudio
     os-prober
+    python3
+    bash
   ];
   programs = {
     hyprland.enable = true;
