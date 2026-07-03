@@ -7,7 +7,10 @@
     docker-compose
     thunar
     quickshell
+    obsidian
+    steam
     gedit
+    tree
     nerd-fonts.jetbrains-mono
     pulseaudio
     bluetui

@@ -12,7 +12,7 @@
 
   # Use Latest Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.supportedFilesystem = [ "ntfs" ]
+  boot.supportedFilesystems = [ "ntfs" ];
   
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -22,6 +22,7 @@
 
   # Set your time zone.
   time.timeZone = "Europe/London";
+  nixpkgs.config.allowUnfree = true;
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;

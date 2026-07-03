@@ -6,5 +6,6 @@
   ];
   programs.nvchad = {
     enable = true;
+    backup = false;
   };
 }
