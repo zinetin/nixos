@@ -2,22 +2,23 @@
 
 {
   home.packages = with pkgs; [
-    kitty
-    feishin
-    docker-compose
-    thunar
-    quickshell
-    obsidian
-    steam
-    gedit
-    tree
-    nerd-fonts.jetbrains-mono
-    pulseaudio
+    anki
     bluetui
-    wl-clipboard
+    docker-compose
+    feishin
+    gedit
     grimblast
-    satty
+    kitty
     libnotify
+    nerd-fonts.jetbrains-mono
+    obsidian
+    pulseaudio
+    quickshell
+    thunar
+    tree
+    satty
+    steam
+    wl-clipboard
   ];
 
 }
