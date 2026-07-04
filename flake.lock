@@ -59,6 +59,26 @@
         "type": "github"
       }
     },
+    "iridium": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783177426,
+        "narHash": "sha256-+ObaxcFoLfdWfTfeXeDp7qBm3mT9qq0JdOt2iH4Do08=",
+        "owner": "zinetin",
+        "repo": "iridium",
+        "rev": "86a5eaca8545e64e77c1ffd19e4a59a7e99d2c45",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zinetin",
+        "repo": "iridium",
+        "type": "github"
+      }
+    },
     "nix4nvchad": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -117,6 +137,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "iridium": "iridium",
         "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs",
         "zen-browser": "zen-browser"
