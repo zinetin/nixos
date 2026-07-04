@@ -35,6 +35,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./root/notebook/root.nix
+          iridium.nixosModules.default
   	      home-manager.nixosModules.home-manager {
   	        home-manager = {
   	          useGlobalPkgs = true;
