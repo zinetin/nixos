@@ -3,8 +3,9 @@
 {
   imports = 
   [
-    ./hypr/hyprland.nix
-    ./quickshell/quickshell.nix
+#    ./hypr/hyprland.nix
+#    ./quickshell/quickshell.nix
+    ./iridium.nix
     ./zen.nix
     ./appearance.nix
     ./nv-chad.nix

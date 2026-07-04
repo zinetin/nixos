@@ -3,21 +3,30 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nix4nvchad = {
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    iridium = {
+      url = "github:zinetin/iridium";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
+
   };
   
-  outputs = {self, nixpkgs, home-manager, zen-browser, ...} @inputs: {
+  outputs = {self, nixpkgs, home-manager, zen-browser, iridium, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
