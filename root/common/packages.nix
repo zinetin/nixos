@@ -20,6 +20,6 @@
   ];
   programs = {
     fish.enable = true;
+    iridium.enable = true;
   };
-
 }
