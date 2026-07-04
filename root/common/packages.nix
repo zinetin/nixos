@@ -4,7 +4,6 @@
   # Programs
   environment.systemPackages = with pkgs; [
     neovim 
-    hyprland
     wget
     fish
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
@@ -20,7 +19,6 @@
     bottles
   ];
   programs = {
-    hyprland.enable = true;
     fish.enable = true;
   };
 

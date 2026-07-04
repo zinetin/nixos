@@ -22,7 +22,7 @@
     iridium = {
       url = "github:zinetin/iridium";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
 
   };
   

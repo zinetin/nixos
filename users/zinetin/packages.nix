@@ -13,7 +13,6 @@
     nerd-fonts.jetbrains-mono
     obsidian
     pulseaudio
-    quickshell
     thunar
     tree
     satty
