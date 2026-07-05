@@ -3,6 +3,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+git pull
 git add .
 git commit -m "Auto Commit from Rebuild Script"
 nix flake update iridium
