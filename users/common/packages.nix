@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     anki
     bluetui
+    cargo
     docker-compose
     feishin
     gedit
