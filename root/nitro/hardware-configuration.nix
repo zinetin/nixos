@@ -36,7 +36,7 @@
   services.xserver.videoDrivers = [ "modesetting" "nvidia"];
   hardware.nvidia = {
     open = false;
-    modeetting.enable = true;
+    modesetting.enable = true;
 
     prime = {
       offload.enable = true;
