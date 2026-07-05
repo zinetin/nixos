@@ -5,5 +5,6 @@ fi
 
 git add .
 git commit -m "Auto Commit from Rebuild Script"
+nix flake update iridium
 sudo nixos-rebuild switch --flake /etc/nixos/#$1
 git push
