@@ -54,6 +54,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./root/nitro/root.nix
+          iridium.nixosModules.default
   	      home-manager.nixosModules.home-manager {
   	        home-manager = {
   	          useGlobalPkgs = true;
