@@ -41,6 +41,7 @@
   	          useGlobalPkgs = true;
   	          useUserPackages = true;
   	          users.zinetin = import ./users/zinetin/home.nix;
+  	          users.iridium = import ./users/iridium/home.nix;
               extraSpecialArgs = { inherit inputs; };
   	        };
         	}
