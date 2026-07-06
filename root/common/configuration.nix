@@ -16,7 +16,7 @@
     loader = {
       refind = {
         enable = true;
-        extraFiles."themes/refindTTT" = "$(refindTTT)";
+        additionalFiles."themes/refindTTT" = "$(refindTTT)";
         extraConfig = ''
           include themes/refindTTT.conf
         '';
