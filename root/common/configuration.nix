@@ -20,7 +20,7 @@
         extraFiles."themes/refindTTT" = "$(refindTTT)";
         extraConfig = ''
           include themes/refindTTT.conf
-        ''
+        '';
       };
     };
     kernelPackages = pkgs.linuxPackages_latest;
