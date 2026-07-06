@@ -19,5 +19,5 @@
     dur_offset_alignment = "center";
 
     animation_frame_delay = 5;
-  }
+  };
 }
