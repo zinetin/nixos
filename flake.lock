@@ -66,11 +66,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783304653,
-        "narHash": "sha256-u+un4xHOAitgZJqjuoWOX7qZCYdAAdErenhq5j9Q9Tc=",
+        "lastModified": 1783347336,
+        "narHash": "sha256-ShJrrRIgqypfnLT6SaBv65RUvY7B89MiobivfesaP4Y=",
         "owner": "zinetin",
         "repo": "iridium",
-        "rev": "4708de41a1336467b66a50e3439866996ce51ff7",
+        "rev": "8240ef19c06d51f00a48682dd274f5fb0f755097",
         "type": "github"
       },
       "original": {
