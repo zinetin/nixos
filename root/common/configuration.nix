@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, inputs, ...}:
 
 {
   # Import other files in common to keep root.nix clean
@@ -14,13 +14,12 @@
 
   boot = {
     loader = {
-      refind = {
+      grub = {
         enable = true;
-        additionalFiles."themes/refindTTT" = "$(refindTTT)";
-        extraConfig = ''
-          include themes/refindTTT.conf
-        '';
+        useOSProber = true;
+        devices = [ "nodev" ];
       };
+      efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
     supportedFilesystems = [ "ntfs" ];

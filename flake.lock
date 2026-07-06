@@ -134,29 +134,12 @@
         "type": "github"
       }
     },
-    "refindTTT": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1783066126,
-        "narHash": "sha256-KUcHBTRnJ23m8i6ld0pKPGNPyRvYOt6w9W8FzaNb41I=",
-        "owner": "gutlessCGH",
-        "repo": "refindTTT",
-        "rev": "3fff11a0f0ef8c056026f0e21bfd9df6055232a1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gutlessCGH",
-        "repo": "refindTTT",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "iridium": "iridium",
         "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs",
-        "refindTTT": "refindTTT",
         "zen-browser": "zen-browser"
       }
     },
