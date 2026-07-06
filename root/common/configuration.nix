@@ -5,16 +5,27 @@
   imports = 
   [
     ./appearance.nix
+    ./rEFInd.nix
+    ./hardware-configuration.nix
     ./packages.nix
     ./services.nix
     ./users.nix
-    ./hardware-configuration.nix
   ];
 
-  # Use Latest Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.supportedFilesystems = [ "ntfs" ];
 
+  boot = {
+    loader = {
+      refind = {
+        enable = true;
+        extraFiles."themes/refindTTT" = "$(refindTTT)";
+        extraConfig = ''
+          include themes/refindTTT.conf
+        ''
+      };
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+    supportedFilesystems = [ "ntfs" ];
+  };
   
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";

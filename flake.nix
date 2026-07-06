@@ -24,9 +24,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    refindTTT = {
+      url = "github:gutlessCGH/refindTTT";
+      flake = false;
+    };
+
   };
   
-  outputs = {self, nixpkgs, home-manager, zen-browser, iridium, ...} @inputs: {
+  outputs = {self, nixpkgs, home-manager, zen-browser, iridium, refindTTT, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
