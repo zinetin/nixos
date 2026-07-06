@@ -5,7 +5,6 @@
   imports = 
   [
     ./appearance.nix
-    ./rEFInd.nix
     ./hardware-configuration.nix
     ./packages.nix
     ./services.nix
