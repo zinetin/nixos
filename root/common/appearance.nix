@@ -18,6 +18,8 @@
 
     dur_offset_alignment = "center";
 
-    animation_frame_delay = 5;
+    animation_frame_delay = 50;
+
+    full_color = true;
   };
 }
