@@ -31,14 +31,6 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-      settings.General = {
-        Enable = "Source,Sink,Media,Socket";
-	Experimental = true;
-      };
-    };
     pulseaudio.package = pkgs.pulseaudio.override { bluetoothSupport = true; };
   };
 }

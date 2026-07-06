@@ -8,6 +8,7 @@
     ./packages.nix
     ./services.nix
     ./users.nix
+    ./hardware-configuration.nix
   ];
 
   # Use Latest Kernel
