@@ -14,6 +14,7 @@
     settings.user = {
       name = "zinetin";
       email = "zinetin2050@proton.me";
+      init.defaultBranch = "main";
     };
   };
   

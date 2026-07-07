@@ -1,6 +1,10 @@
-{pkgs, ...}:
+{pkgs, inputs, ...}:
 
 {
+  imports = [
+    inputs.nix-flatpak.homeManagerModules.nix-flatpak
+  ];
+
   home.packages = with pkgs; [
     anki
     bluetui
@@ -22,7 +26,7 @@
   ];
 
   services.flatpak.packages = [
-    org.prismlauncher.PrismLauncher
-    io.github.everestapi.Olympus
+    "org.prismlauncher.PrismLauncher"
+    "io.github.everestapi.Olympus"
   ];
 }

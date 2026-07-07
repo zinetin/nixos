@@ -29,7 +29,7 @@
     };
   };
   
-  outputs = {self, nixpkgs, home-manager, zen-browser, iridium, ...} @inputs: {
+  outputs = {self, nixpkgs, home-manager, zen-browser, iridium, nix-flatpak, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
@@ -58,6 +58,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./root/nitro/root.nix
+          nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
   	      home-manager.nixosModules.home-manager {
   	        home-manager = {
