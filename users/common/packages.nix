@@ -21,4 +21,8 @@
     wl-clipboard
   ];
 
+  services.flatpak.packages = [
+    org.prismlauncher.PrismLauncher
+    io.github.everestapi.Olympus
+  ];
 }

@@ -11,6 +11,7 @@
     hyprland
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     ly
+    mpv
     neovim 
     os-prober
     p7zip
@@ -19,6 +20,9 @@
     wineWow64Packages.stable
     wget
   ];
+
+  services.flatpak.packages = [];
+
   programs = {
     fish.enable = true;
 #    hyprland.enable = true;

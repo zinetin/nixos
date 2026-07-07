@@ -13,5 +13,9 @@
     libinput.enable = true;
     printing.enable = true;
     openssh.enable = true;
+    flatpak = {
+      enable = true;
+      update.onActivation = true;
+    };
   };
 }
