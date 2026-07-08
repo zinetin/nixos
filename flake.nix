@@ -2,10 +2,13 @@
   description = "My NixOS Flake Config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
+    dolphin-overlay = {
+      url = "github:rumboon/dolphin-overlay";
+    };
+
+    iridium = {
+      url = "github:zinetin/iridium";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -19,17 +22,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    iridium = {
-      url = "github:zinetin/iridium";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
+
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
+    
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
   
-  outputs = {self, nixpkgs, home-manager, zen-browser, iridium, nix-flatpak, ...} @inputs: {
+  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {

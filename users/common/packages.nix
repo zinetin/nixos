@@ -10,10 +10,11 @@
     bluetui
     cargo
     docker-compose
-    dolphin
     feishin
     gedit
     grimblast
+    kdePackages.dolphin
+    kdePackages.qtsvg
     kitty
     libnotify
     nerd-fonts.jetbrains-mono

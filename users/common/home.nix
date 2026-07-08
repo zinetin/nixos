@@ -11,10 +11,13 @@
 
   programs.git = {
     enable = true;
-    settings.user = {
-      name = "zinetin";
-      email = "zinetin2050@proton.me";
+    settings = {
+      user = {
+        name = "zinetin";
+        email = "zinetin2050@proton.me";
+      };
       init.defaultBranch = "main";
+      pull.rebase = "false";
     };
   };
   
