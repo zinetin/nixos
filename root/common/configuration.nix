@@ -18,6 +18,7 @@
         enable = true;
         useOSProber = true;
         devices = [ "nodev" ];
+        efiSupport = true;
       };
       efi.canTouchEfiVariables = true;
     };

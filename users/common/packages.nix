@@ -10,6 +10,7 @@
     bluetui
     cargo
     docker-compose
+    dolphin
     feishin
     gedit
     grimblast
