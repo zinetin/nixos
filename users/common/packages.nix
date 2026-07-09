@@ -20,6 +20,7 @@
     nerd-fonts.jetbrains-mono
     obsidian
     pulseaudio
+    spotify
     thunar
     tree
     satty

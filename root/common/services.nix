@@ -17,6 +17,8 @@
     printing.enable = true;
     openssh.enable = true;
 
+    udisks2.enable = true;
+
     flatpak = {
       enable = true;
       update.onActivation = true;

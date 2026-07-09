@@ -17,6 +17,8 @@
     p7zip
     pulseaudio
     python3
+    rclone
+    udisks2
     wineWow64Packages.stable
     wget
   ];
@@ -27,5 +29,9 @@
     fish.enable = true;
 #    hyprland.enable = true;
     iridium.enable = true;
+    fuse = {
+      enable = true;
+      userAllowOther = true;
+    };
   };
 }
