@@ -4,7 +4,6 @@
   # Programs
   environment.systemPackages = with pkgs; [
     bash
-    bottles
     curl
     fish
     git
