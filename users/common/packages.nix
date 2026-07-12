@@ -20,6 +20,7 @@
     nerd-fonts.jetbrains-mono
     obsidian
     pulseaudio
+    q4wine
     spotify
     thunar
     tree

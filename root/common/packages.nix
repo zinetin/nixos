@@ -19,6 +19,7 @@
     rclone
     udisks2
     wineWow64Packages.stable
+    winetricks
     wget
   ];
 
