@@ -2,11 +2,12 @@
 
 {
   imports = [
-    ./zen.nix
+    ./appearance.nix
+    ./flatpak.nix
     ./iridium.nix
     ./nv-chad.nix
     ./packages.nix
-    ./appearance.nix
+    ./zen.nix
   ];
 
   programs.git = {

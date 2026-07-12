@@ -12,4 +12,9 @@
       };
     };
   };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;  # Critical for Steam
+  };
 }
