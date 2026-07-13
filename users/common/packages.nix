@@ -13,6 +13,7 @@
     feishin
     gedit
     grimblast
+    kdePackages.ark
     kdePackages.dolphin
     kdePackages.qtsvg
     kitty
