@@ -11,7 +11,7 @@
     ./users.nix
   ];
 
-  services.xserver.libinput.touchpad.disableWhileTyping = false;
+  services.libinput.touchpad.disableWhileTyping = false;
   boot = {
     loader = {
       grub = {
