@@ -13,6 +13,8 @@
       wireplumber.enable = true;
     };
 
+    gnome.gnome-keyring.enable = true;
+
     libinput.enable = true;
     printing.enable = true;
     openssh.enable = true;

@@ -18,10 +18,13 @@
     kdePackages.qtsvg
     kitty
     libnotify
+    megasync
     nerd-fonts.jetbrains-mono
     obsidian
+    proton-vpn
     pulseaudio
     q4wine
+    qbittorrent
     spotify
     thunar
     tree
