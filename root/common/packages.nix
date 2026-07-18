@@ -17,7 +17,11 @@
     pulseaudio
     python3
     rclone
+    spice-gtk 
     udisks2
+    virt-manager
+    virt-viewer
+    virtio-win
     wineWow64Packages.stable
     winetricks
     wget
@@ -26,6 +30,8 @@
   services.flatpak.packages = [];
 
   programs = {
+    virt-manager.enable = true;
+
     fish.enable = true;
 #    hyprland.enable = true;
     iridium.enable = true;

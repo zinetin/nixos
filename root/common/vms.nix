@@ -2,27 +2,20 @@
 
 {
   # Enable libvirtd
-  virtualisation.libvirtd.enable = true;
-  
-  # Enable QEMU/KVM
-  virtualisation.libvirtd.qemu = {
-    package = pkgs.qemu_kvm;
-    swtpm.enable = true;  # TPM support (optional)
-    ovmf.enable = true;   # UEFI support
-    ovmf.packages = [ pkgs.OVMFFull.fd ];
+  virtualisation.libvirtd = {
+    enable = true;
+    onBoot = "start";
+    onShutdown = "shutdown";
+    qemu = {
+      package = pkgs.qemu_kvm;
+      swtpm.enable = true;  # TPM support (optional)
+    };
   };
 
-  # Add your user to the libvirtd group
-  users.users.yourusername.extraGroups = [ "libvirtd" ];
+  security.polkit.enable = true;
 
-  # Optional: Install virt-manager GUI
-  programs.virt-manager.enable = true;
-  
-  # Optional: Install guest tools
-  environment.systemPackages = with pkgs; [
-    virt-manager      # GUI for managing VMs
-    virt-viewer       # Lightweight VM viewer
-    spice-gtk         # SPICE client for better display/audio
-    win-virtio        # Windows virtio drivers (if running Windows guests)
-  ];
+  # Optional: Add udev rules for USB access
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTR{idVendor}=="3938", ATTR{idProduct}=="1191", GROUP="kvm", MODE="0666"
+  '';
 }

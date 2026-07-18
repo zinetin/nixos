@@ -7,7 +7,7 @@
   # Define users
   users.users.zinetin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "input" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "video" "input" "docker" "libvirtd" "kvm" ];
   };
 
   users.users.iridium = {
