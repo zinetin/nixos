@@ -9,6 +9,7 @@
     ./packages.nix
     ./services.nix
     ./users.nix
+    ./vms.nix
   ];
 
   services.libinput.touchpad.disableWhileTyping = false;
@@ -31,6 +32,8 @@
   console = {
     keyMap = "us";
   };
+
+  home-manager.backupFileExtension = "backup";
 
   # Set your time zone.
   time.timeZone = "Europe/London";
