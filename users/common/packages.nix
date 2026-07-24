@@ -12,7 +12,6 @@
     docker-compose
     feishin
     gedit
-    grimblast
     kdePackages.ark
     kdePackages.dolphin
     kdePackages.qtsvg
@@ -28,7 +27,6 @@
     spotify
     thunar
     tree
-    satty
     steam
     wl-clipboard
   ];

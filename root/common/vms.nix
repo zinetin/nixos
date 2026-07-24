@@ -4,6 +4,7 @@
   # Enable libvirtd
   virtualisation.libvirtd = {
     enable = true;
+    qemu.vhostUserPackages = [ pkgs.virtiofsd ];
     onBoot = "start";
     onShutdown = "shutdown";
     qemu = {
@@ -14,8 +15,5 @@
 
   security.polkit.enable = true;
 
-  # Optional: Add udev rules for USB access
-  services.udev.extraRules = ''
-    SUBSYSTEM=="usb", ATTR{idVendor}=="3938", ATTR{idProduct}=="1191", GROUP="kvm", MODE="0666"
-  '';
+  virtualisation.spiceUSBRedirection.enable = true;
 }
