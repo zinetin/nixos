@@ -10,20 +10,28 @@
     bluetui
     cargo
     docker-compose
+    discord
     feishin
     gedit
     kdePackages.ark
     kdePackages.dolphin
     kdePackages.qtsvg
+    kdePackages.kio-fuse
+    kdePackages.kio-extras
+    kdePackages.kimageformats
+    kdePackages.ffmpegthumbs
     kitty
     libnotify
     megasync
     nerd-fonts.jetbrains-mono
+    obs-studio
     obsidian
     proton-vpn
+    puddletag
     pulseaudio
     q4wine
     qbittorrent
+    reaper
     spotify
     thunar
     tree

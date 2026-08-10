@@ -4,11 +4,15 @@
   # Programs
   environment.systemPackages = with pkgs; [
     bash
+    bridge-utils
     curl
+    dnsmasq
+    ffmpeg
     fish
     git
     hyprland
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
+    iptables
     ly
     mpv
     neovim 
@@ -33,12 +37,21 @@
     virt-manager.enable = true;
 
     fish.enable = true;
-#    hyprland.enable = true;
+
+    # hyprland.enable = true;
+
+    halley = {
+      enable = true;
+      package = inputs.halley.packages.${pkgs.system}.halley-unstable;
+    };
+
     iridium.enable = true;
+
     fuse = {
       enable = true;
       userAllowOther = true;
     };
+
     steam = {
       enable = true;
       remotePlay.openFirewall = true;

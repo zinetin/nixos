@@ -1,4 +1,4 @@
-{config, inputs, ...}:
+{config, inputs, pkgs, ...}:
 
 {
   imports = [
@@ -35,6 +35,8 @@
     };
   };
 
+# Fix dolphin
+  xdg.configFile."menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   home.file."Pictures/Screenshots/.keep".text = "";
  
 }

@@ -23,9 +23,15 @@
       };
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernel.sysctl = {
+      "net.ipv4.ip_forward" = 1;
+      "net.ipv6.conf.all.forwarding" = 1;
+    };
+    kernelPackages = pkgs.linuxPackages_zen;
     supportedFilesystems = [ "ntfs" ];
   };
+
+  networking.firewall.trustedInterfaces = [ "waydroid0" ];
   
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
