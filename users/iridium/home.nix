@@ -4,28 +4,15 @@
   home.username = "iridium";
   home.homeDirectory = "/home/iridium";
 
-  programs.git = {
+  imports = [
+    inputs.iridium.homeModules.default
+  ];
+
+  programs.iridium = {
     enable = true;
-    settings.user = {
-      name = "zinetin";
-      email = "zinetin2050@proton.me";
-    };
-  };
-  
-  programs.ssh = {
-    enable = true;
-    enableDefaultConfig = false;
-    settings = {
-      "github.com" = {
-        HostName = "github.com";
-        User = "git";
-        IdentityFile = "~/.ssh/github";
-        AddKeysToAgent = "yes";
-      };
-    };
+    # additionalConfig = ./extra.lua;
   };
 
-  home.file."Pictures/Screenshots/.keep".text = "";
   
   home.stateVersion = "25.05";
 }

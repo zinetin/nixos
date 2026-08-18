@@ -7,6 +7,10 @@
       url = "github:rumboon/dolphin-overlay";
     };
 
+    end-4-hyprland = {
+      url = "github:celesrenata/end-4-flakes/upstream-sync-2026";
+    }
+
     iridium = {
       url = "github:zinetin/iridium";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,7 +45,7 @@
 
   };
   
-  outputs = {self, dolphin-overlay, iridium, halley, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, end-4-hyprland, iridium, halley, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
