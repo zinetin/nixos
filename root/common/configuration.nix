@@ -12,6 +12,8 @@
     ./vms.nix
   ];
 
+  programs.noisetorch.enable = true;
+
   services.libinput.touchpad.disableWhileTyping = false;
   boot = {
     loader = {

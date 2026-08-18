@@ -9,6 +9,7 @@
     anki
     bluetui
     cargo
+    davinci-resolve
     docker-compose
     discord
     feishin
@@ -24,6 +25,7 @@
     libnotify
     megasync
     nerd-fonts.jetbrains-mono
+    noisetorch
     obs-studio
     obsidian
     proton-vpn

@@ -33,6 +33,8 @@
 
   services.flatpak.packages = [];
 
+  services.desktopManager.plasma6.enable = true;
+
   programs = {
     virt-manager.enable = true;
 
