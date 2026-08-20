@@ -7,10 +7,6 @@
       url = "github:rumboon/dolphin-overlay";
     };
 
-    end-4-hyprland = {
-      url = "github:celesrenata/end-4-flakes/upstream-sync-2026";
-    };
-
     iridium = {
       url = "github:zinetin/iridium";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,11 +41,11 @@
 
   };
   
-  outputs = {self, dolphin-overlay, end-4-hyprland, iridium, halley, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, iridium, halley, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
-      notebook = nixpkgs.lib.nixosSystem {
+      z-notebook = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
@@ -70,7 +66,7 @@
       };
 
       # GAMING laptop - Acer nitro an515-56
-      nitro = nixpkgs.lib.nixosSystem {
+      z-nitro = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [

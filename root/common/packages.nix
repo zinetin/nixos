@@ -14,8 +14,10 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     iptables
     ly
+    meson
     mpv
     neovim 
+    ninja
     os-prober
     p7zip
     pulseaudio

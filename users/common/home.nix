@@ -3,13 +3,17 @@
 {
   imports = [
     ./appearance.nix
+    ./fish.nix
     ./flatpak.nix
-    ./iridium.nix
     ./nv-chad.nix
     ./packages.nix
     ./zen.nix
   ];
-
+  
+  home.sessionVariables = {
+    PATH = "$PATH:${pkgs.ninja}/bin";
+  };
+  
   programs.git = {
     enable = true;
     settings = {
