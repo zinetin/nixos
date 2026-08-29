@@ -1,4 +1,4 @@
-{config, ...}:
+{config, pkgs, ...}:
 
 {
   services = {
@@ -16,7 +16,21 @@
     gnome.gnome-keyring.enable = true;
 
     libinput.enable = true;
-    printing.enable = true;
+
+    printing = {
+      enable = true;
+      drivers = [ pkgs.epson-escpr2 pkgs.epson-escpr pkgs.cups-filters ];
+      listenAddresses = [ "*:631" ]; 
+      allowFrom = [ "all" ];
+      defaultShared = true;
+      browsing = true;
+      extraConf = ''
+        ServerAlias *
+        DefaultEncryption Never
+      '';
+    };
+
+  
     openssh.enable = true;
 
     udisks2.enable = true;
@@ -24,6 +38,20 @@
     flatpak = {
       enable = true;
       update.onActivation = true;
+    };
+  };
+
+  networking.firewall = {
+    allowedTCPPorts = [ 631 ];
+    allowedUDPPorts = [ 631 ];
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    publish = {
+      enable = true;
+      userServices = true;
     };
   };
 }

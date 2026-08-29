@@ -23,6 +23,7 @@
     kdePackages.ffmpegthumbs
     kitty
     libnotify
+    libreoffice-qt-fresh
     megasync
     nerd-fonts.jetbrains-mono
     noisetorch
@@ -34,6 +35,7 @@
     q4wine
     qbittorrent
     reaper
+    shotcut
     spotify
     thunar
     tree
