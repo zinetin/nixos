@@ -45,11 +45,11 @@
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
-      z-notebook = nixpkgs.lib.nixosSystem {
+      z-acer = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./root/notebook/root.nix
+          ./root/z-acer/root.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
           halley.nixosModules.default
@@ -58,19 +58,18 @@
   	          useGlobalPkgs = true;
   	          useUserPackages = true;
   	          users.zinetin = import ./users/zinetin/home.nix;
-  	          users.iridium = import ./users/iridium/home.nix;
               extraSpecialArgs = { inherit inputs; };
   	        };
         	}
         ];
       };
 
-      # GAMING laptop - Acer nitro an515-56
-      z-nitro = nixpkgs.lib.nixosSystem {
+      # Laptop that I got for very cheap that is very good
+      z-hp255 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./root/nitro/root.nix
+          ./root/z-hp255/root.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
           halley.nixosModules.default
@@ -82,6 +81,27 @@
               extraSpecialArgs = { inherit inputs; };
   	        };
         	}
+        ];
+      };
+
+
+      # GAMING laptop - Acer nitro an515-56
+      z-nitro = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./root/z-nitro/root.nix
+          nix-flatpak.nixosModules.nix-flatpak
+          iridium.nixosModules.default
+          halley.nixosModules.default
+  	      home-manager.nixosModules.home-manager {
+  	        home-manager = {
+  	          useGlobalPkgs = true;
+  	          useUserPackages = true;
+  	          users.zinetin = import ./users/zinetin/home.nix;
+              extraSpecialArgs = { inherit inputs; };
+  	        };
+         	}
         ];
       };
     };
