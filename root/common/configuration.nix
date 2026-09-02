@@ -12,7 +12,7 @@
     ./vms.nix
   ];
 
-  programs.noisetorch.enable = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   services.libinput.touchpad.disableWhileTyping = false;
   boot = {

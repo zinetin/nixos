@@ -6,9 +6,11 @@
     bash
     bridge-utils
     curl
+    dioxus-cli
     dnsmasq
     ffmpeg
     fish
+    gcc
     git
     hyprland
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
@@ -18,11 +20,14 @@
     mpv
     neovim 
     ninja
+    openssl
     os-prober
     p7zip
+    pkg-config
     pulseaudio
     python3
     rclone
+    rustc
     spice-gtk 
     udisks2
     virt-manager
@@ -41,6 +46,11 @@
     virt-manager.enable = true;
 
     fish.enable = true;
+
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
 
     # hyprland.enable = true;
 
