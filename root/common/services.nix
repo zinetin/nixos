@@ -41,11 +41,6 @@
     };
   };
 
-  networking.firewall = {
-    allowedTCPPorts = [ 631 ];
-    allowedUDPPorts = [ 631 ];
-  };
-
   services.avahi = {
     enable = true;
     nssmdns4 = true;

@@ -13,6 +13,8 @@
     docker-compose
     discord
     feishin
+    feh
+    mupdf
     gedit
     kdePackages.ark
     kdePackages.dolphin

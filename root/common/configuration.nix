@@ -5,6 +5,7 @@
   imports = 
   [
     ./appearance.nix
+    ./firewall.nix
     ./hardware-configuration.nix
     ./packages.nix
     ./services.nix
@@ -15,6 +16,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   services.libinput.touchpad.disableWhileTyping = false;
+
   boot = {
     loader = {
       grub = {

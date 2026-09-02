@@ -7,6 +7,7 @@
     ./flatpak.nix
     ./nv-chad.nix
     ./packages.nix
+    ./services.nix
     ./zen.nix
   ];
   
@@ -39,7 +40,5 @@
     };
   };
 
-# Fix dolphin
-  xdg.configFile."menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   home.file."Pictures/Screenshots/.keep".text = "";
 }
