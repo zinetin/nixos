@@ -43,7 +43,7 @@
     keyMap = "us";
   };
 
-  home-manager.backupFileExtension = "backup";
+  home-manager.backupFileExtension = "hm-bak";
 
   # Set your time zone.
   time.timeZone = "Europe/London";

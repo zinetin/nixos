@@ -30,6 +30,7 @@
     rustc
     spice-gtk 
     udisks2
+    unzip
     virt-manager
     virt-viewer
     virtio-win
