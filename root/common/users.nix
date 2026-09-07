@@ -7,7 +7,7 @@
   # Define users
   users.users.zinetin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "input" "docker" "libvirtd" "kvm" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "input" "docker" "libvirtd" "kvm" "plugdev"];
   };
 
   users.users.iridium = {

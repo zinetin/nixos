@@ -24,6 +24,7 @@
     os-prober
     p7zip
     pkg-config
+    qt6.qtmultimedia
     pulseaudio
     python3
     rclone
@@ -31,6 +32,7 @@
     spice-gtk 
     udisks2
     unzip
+    vial
     virt-manager
     virt-viewer
     virtio-win
