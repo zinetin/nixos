@@ -49,9 +49,6 @@
   time.timeZone = "Europe/London";
   nixpkgs.config.allowUnfree = true;
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
-
   environment.pathsToLink = [ 
     "/share/applications" 
     "/share/xdg-desktop-portal" 

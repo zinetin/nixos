@@ -75,4 +75,6 @@
       dedicatedServer.openFirewall = true;
     };
   };
+
+  networking.wireless.iwd.enable = true;
 }
