@@ -36,6 +36,7 @@
     pulseaudio
     q4wine
     qbittorrent
+    r2modman
     reaper
     shotcut
     spotify

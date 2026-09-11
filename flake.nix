@@ -12,9 +12,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    halley = {
-      url = "github:binarylinuxx/halley-flake";
-    };
+#    halley = {
+#      url = "github:binarylinuxx/halley-flake";
+#    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -41,7 +41,7 @@
 
   };
   
-  outputs = {self, dolphin-overlay, iridium, halley, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
 
     # Bad ASUS notebook laptop
     nixosConfigurations = {
@@ -52,7 +52,7 @@
           ./root/z-acer/root.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
-          halley.nixosModules.default
+#          halley.nixosModules.default
   	      home-manager.nixosModules.home-manager {
   	        home-manager = {
   	          useGlobalPkgs = true;
@@ -72,7 +72,7 @@
           ./root/z-hp255/root.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
-          halley.nixosModules.default
+#          halley.nixosModules.default
   	      home-manager.nixosModules.home-manager {
   	        home-manager = {
   	          useGlobalPkgs = true;
@@ -93,7 +93,7 @@
           ./root/z-nitro/root.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
-          halley.nixosModules.default
+#          halley.nixosModules.default
   	      home-manager.nixosModules.home-manager {
   	        home-manager = {
   	          useGlobalPkgs = true;

@@ -55,12 +55,14 @@
       binfmt = true;
     };
 
+    nix-ld.enable = true;
+
     # hyprland.enable = true;
 
-    halley = {
-      enable = true;
-      package = inputs.halley.packages.${pkgs.system}.halley-unstable;
-    };
+#    halley = {
+#      enable = true;
+#      package = inputs.halley.packages.${pkgs.system}.halley-unstable;
+#    };
 
     iridium.enable = true;
 
