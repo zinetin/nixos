@@ -29,6 +29,7 @@
     megasync
     nerd-fonts.jetbrains-mono
     noisetorch
+    nicotine-plus
     obs-studio
     obsidian
     proton-vpn
