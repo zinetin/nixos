@@ -14,6 +14,13 @@
   home.sessionVariables = {
     PATH = "$PATH:${pkgs.ninja}/bin";
   };
+
+
+  home.activation = {
+    removeGtkrc = inputs.home-manager.lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
+      rm -f "$HOME/.gtkrc-2.0"
+    '';
+  };
   
   programs.git = {
     enable = true;

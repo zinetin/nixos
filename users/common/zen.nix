@@ -8,6 +8,8 @@
   programs.zen-browser = {
     enable = true;
 
+    setAsDefaultBrowser = true;
+
     nativeMessagingHosts = [ pkgs.firefoxpwa ];
 
     policies = {
@@ -36,6 +38,34 @@
     };
 
     profiles.default = {
+      id = 0;
+      name = "default";
+      isDefault = true;
+
+      spacesForce = true;
+      spaces = {
+        "Default" = {
+          id = "40a11c37-42f3-48fe-ba7c-64f329c8f35e";
+          position = 1000;
+
+          theme = {
+            type = "gradient";
+            colors = [
+              {
+                red = 020;
+                green = 020;
+                blue = 020;
+                algorithm = "floating";
+                type = "explicit-lightness";
+                lightness = 50;
+              }
+            ];
+            opacity = 1.0;
+            texture = 0.0;
+          };
+        };
+      };
+
       pins = {
         Blank = {
           id = "941da1a5-91c2-49e7-8783-cdef327ff794";
