@@ -25,7 +25,7 @@
     kdePackages.ffmpegthumbs
     kitty
     libnotify
-    libreoffice-qt-fresh
+    libreoffice-qt-stable
     megasync
     nerd-fonts.jetbrains-mono
     noisetorch
