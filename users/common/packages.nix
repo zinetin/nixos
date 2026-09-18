@@ -24,6 +24,7 @@
     kdePackages.kimageformats
     kdePackages.ffmpegthumbs
     kitty
+    krita
     libnotify
     libreoffice-qt-stable
     megasync
