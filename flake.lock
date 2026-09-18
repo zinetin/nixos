@@ -63,14 +63,15 @@
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "wallpapers": "wallpapers"
       },
       "locked": {
-        "lastModified": 1789148225,
-        "narHash": "sha256-tl+M/Xf0g93/k2c4y8u3jNudZ0wDl1/ObI3SDtPpfoE=",
+        "lastModified": 1789737438,
+        "narHash": "sha256-c+4T4nc9zAzxiC9D3FC14EWcTaTuVIgIHfBEZPDAx7Y=",
         "owner": "zinetin",
         "repo": "iridium",
-        "rev": "e91c8dacf512c13bf7573ba4c64c4211c1f37d65",
+        "rev": "428738669b76e027df80888d67c216d0d8ecbf73",
         "type": "github"
       },
       "original": {
@@ -173,6 +174,21 @@
         "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs_2",
         "zen-browser": "zen-browser"
+      }
+    },
+    "wallpapers": {
+      "locked": {
+        "lastModified": 1789736345,
+        "narHash": "sha256-sXmMbeD4VsoanNWWPjxdoeXRasd9hyBlWQu11GKqzaE=",
+        "owner": "zinetin",
+        "repo": "wallpapers",
+        "rev": "a9dd16cb4884362f505eed0cff15bed026b5908c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zinetin",
+        "repo": "wallpapers",
+        "type": "github"
       }
     },
     "zen-browser": {
