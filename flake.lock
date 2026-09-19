@@ -67,11 +67,11 @@
         "wallpapers": "wallpapers"
       },
       "locked": {
-        "lastModified": 1789737438,
-        "narHash": "sha256-c+4T4nc9zAzxiC9D3FC14EWcTaTuVIgIHfBEZPDAx7Y=",
+        "lastModified": 1789815915,
+        "narHash": "sha256-54/MxNmFNtgzmr9CznbsA1Luw4L1dOugu6daf54csiQ=",
         "owner": "zinetin",
         "repo": "iridium",
-        "rev": "428738669b76e027df80888d67c216d0d8ecbf73",
+        "rev": "591b98fb7b68520f2e5c3d78c978c569e2106445",
         "type": "github"
       },
       "original": {
@@ -178,11 +178,11 @@
     },
     "wallpapers": {
       "locked": {
-        "lastModified": 1789736345,
-        "narHash": "sha256-sXmMbeD4VsoanNWWPjxdoeXRasd9hyBlWQu11GKqzaE=",
+        "lastModified": 1789813029,
+        "narHash": "sha256-VzS3ulNaE/aSG1wvb/KUg/IspdnPDNP84V7+FTat6ZQ=",
         "owner": "zinetin",
         "repo": "wallpapers",
-        "rev": "a9dd16cb4884362f505eed0cff15bed026b5908c",
+        "rev": "c5e44a410166002100885037892604049869359a",
         "type": "github"
       },
       "original": {
