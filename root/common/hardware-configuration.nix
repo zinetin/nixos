@@ -11,6 +11,7 @@
 	      Experimental = true;
       };
     };
+    opentabletdriver.enable = true;
   };
 
   hardware.keyboard.qmk.enable = true;
