@@ -53,6 +53,9 @@
     appimage = {
       enable = true;
       binfmt = true;
+      extraPkgs = pkgs: [
+        pkgs.mpv
+      ];
     };
 
     nix-ld.enable = true;

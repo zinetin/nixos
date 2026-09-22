@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     anki
+    audacity
     bluetui
     cargo
     davinci-resolve
