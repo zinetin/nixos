@@ -16,6 +16,8 @@
     ];
 
     extraPlugins = ''
+    vim.o.shell = "${pkgs.fish}/bin/fish"
+
     return {
       {
         'mrcjkb/rustaceanvim',
