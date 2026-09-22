@@ -55,6 +55,7 @@
       binfmt = true;
       package = pkgs.appimage-run.override {
         extraPkgs = pkgs: [
+          pkgs.libepoxy
           pkgs.mpv
         ];
       };
