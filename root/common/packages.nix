@@ -53,9 +53,11 @@
     appimage = {
       enable = true;
       binfmt = true;
-      extraPkgs = pkgs: [
-        pkgs.mpv
-      ];
+      package = pkgs.appimage-run.override {
+        extraPkgs = pkgs: [
+          pkgs.mpv
+        ];
+      };
     };
 
     nix-ld.enable = true;
