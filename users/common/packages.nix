@@ -43,7 +43,6 @@
     reaper
     shotcut
     spotify
-    tauon
     thunar
     tree
     steam
