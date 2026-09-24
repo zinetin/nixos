@@ -49,6 +49,7 @@
 
 # Not WSL
     
+    nixosConfigurations = {
       # Laptop that I got for very cheap that is very good
       z-hp255 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -79,7 +80,6 @@
 # WSL
 
     # GAMING laptop - Acer nitro 5 an515-56 but its running in wsl
-    nixosConfigurations = {
       z-nitro-wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
