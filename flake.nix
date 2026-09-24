@@ -33,6 +33,10 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
+
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL";
+    };
     
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -41,46 +45,20 @@
 
   };
   
-  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, zen-browser, ...} @inputs: {
 
-    # Bad ASUS notebook laptop
-    nixosConfigurations = {
-      z-acer = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./root/z-acer/root.nix
-          nix-flatpak.nixosModules.nix-flatpak
-          iridium.nixosModules.default
-#          halley.nixosModules.default
-  	      home-manager.nixosModules.home-manager {
-  	        home-manager = {
-  	          useGlobalPkgs = true;
-  	          useUserPackages = true;
-  	          users.zinetin = import ./users/zinetin/home.nix;
-              extraSpecialArgs = { inherit inputs; };
-  	        };
-        	}
-        ];
-      };
-
+# Not WSL
+    
       # Laptop that I got for very cheap that is very good
       z-hp255 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./root/z-hp255/root.nix
+          ./nixos/hosts/z-hp255/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
 #          halley.nixosModules.default
-  	      home-manager.nixosModules.home-manager {
-  	        home-manager = {
-  	          useGlobalPkgs = true;
-  	          useUserPackages = true;
-  	          users.zinetin = import ./users/zinetin/home.nix;
-              extraSpecialArgs = { inherit inputs; };
-  	        };
-        	}
+          home-manager.nixosModules.home-manager 
         ];
       };
 
@@ -90,18 +68,26 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./root/z-nitro/root.nix
+          ./nixos/hosts/z-nitro/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
 #          halley.nixosModules.default
-  	      home-manager.nixosModules.home-manager {
-  	        home-manager = {
-  	          useGlobalPkgs = true;
-  	          useUserPackages = true;
-  	          users.zinetin = import ./users/zinetin/home.nix;
-              extraSpecialArgs = { inherit inputs; };
-  	        };
-         	}
+          home-manager.nixosModules.home-manager
+          ];
+      };
+
+# WSL
+
+    # GAMING laptop - Acer nitro 5 an515-56 but its running in wsl
+    nixosConfigurations = {
+      z-nitro-wsl = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos/hosts/z-nitro-wsl/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
+          nixos-wsl.nixosModules.wsl
+          home-manager.nixosModules.home-manager
         ];
       };
     };
