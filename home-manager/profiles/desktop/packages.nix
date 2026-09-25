@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     anki
     audacity
-    davinci-resolve
     discord
     feishin
     feh
