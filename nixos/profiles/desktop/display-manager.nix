@@ -15,17 +15,19 @@
   };
 
 
-  services.displayManager.ly.settings = {
+  services.displayManager.ly = {
     ly.enable = true;
 
-    animation = "dur_file";
+    settings = {
+      animation = "dur_file";
 
-    dur_file_path = "/etc/nixos/root/common/blackhole-smooth-240x67.dur";
+      dur_file_path = "/etc/nixos/root/common/blackhole-smooth-240x67.dur";
 
-    dur_offset_alignment = "center";
+      dur_offset_alignment = "center";
 
-    animation_frame_delay = 50;
+      animation_frame_delay = 50;
 
-    full_color = true;
+      full_color = true;
+    };
   };
 }

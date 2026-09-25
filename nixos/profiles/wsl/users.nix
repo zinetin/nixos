@@ -2,6 +2,6 @@
 
 {
   home-manager = {
-    sharedModules = [ ../../home-manager/profiles/wsl/home.nix ];
+    sharedModules = [ ../../../home-manager/profiles/wsl/home.nix ];
   };
 }

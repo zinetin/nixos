@@ -7,5 +7,5 @@
     ./packages.nix
     ./services.nix
     ./zen.nix
-  ]
+  ];
 }

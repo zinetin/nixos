@@ -31,7 +31,8 @@
     shotcut
     spotify
     steam
-  ]
+  ];
+
   services.flatpak.packages = [
     "org.prismlauncher.PrismLauncher"
     "io.github.everestapi.Olympus"
