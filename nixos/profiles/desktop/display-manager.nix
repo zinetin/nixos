@@ -15,6 +15,8 @@
   };
 
 
+  services.displayManager.defaultSession = "hyprland";
+
   services.displayManager.ly = {
     enable = true;
 
