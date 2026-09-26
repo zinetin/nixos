@@ -9,7 +9,14 @@
   ];
 
   programs.virt-manager.enable = true;
+
+  # Udev rule to make libvirt be able to read and write to /dev/sda
+  services.udev.extraRules = ''
+    SUBSYSTEM=="block", KERNEL=="sd?", ENV{ID_WWN}=="0x5001b448bb4e6ba1", GROUP="kvm", MODE="0660"
+  '';
+
   # Enable libvirtd
+
   virtualisation = {
 
     waydroid = {
