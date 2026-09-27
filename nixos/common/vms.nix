@@ -14,7 +14,9 @@
   services.udev.extraRules = ''
     SUBSYSTEM=="block", KERNEL=="sd?", ENV{ID_WWN}=="0x5001b448bb4e6ba1", GROUP="kvm", MODE="0660"
   '';
-
+  boot.extraModprobeConfig = ''
+    options kvm ignore_msrs=1 report_ignored_msrs=0
+  '';
   # Enable libvirtd
 
   virtualisation = {
