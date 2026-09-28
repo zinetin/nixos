@@ -23,13 +23,17 @@
     settings = {
       animation = "dur_file";
 
+      animation_frame_delay = 50;
+
       dur_file_path = toString ./blackhole-smooth-240x67.dur;
 
       dur_offset_alignment = "center";
 
-      animation_frame_delay = 50;
-
       full_color = true;
+
+      save = true;
+      
+      load = true;
     };
   };
 }
