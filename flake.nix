@@ -12,10 +12,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-#    halley = {
-#      url = "github:binarylinuxx/halley-flake";
-#    };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -58,7 +54,6 @@
           ./nixos/hosts/z-hp255/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
-#          halley.nixosModules.default
           home-manager.nixosModules.home-manager 
         ];
       };
@@ -72,7 +67,6 @@
           ./nixos/hosts/z-nitro/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
-#          halley.nixosModules.default
           home-manager.nixosModules.home-manager
           ];
       };
