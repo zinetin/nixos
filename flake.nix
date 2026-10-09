@@ -68,7 +68,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           iridium.nixosModules.default
           home-manager.nixosModules.home-manager
-          ];
+        ];
       };
 
 # WSL

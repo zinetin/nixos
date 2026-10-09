@@ -35,6 +35,7 @@
   services.flatpak.packages = [
     "org.prismlauncher.PrismLauncher"
     "io.github.everestapi.Olympus"
+    "org.vinegarhq.Sober"
   ];
 
   # Default applications to open stuff
