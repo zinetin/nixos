@@ -13,5 +13,5 @@ in
     enabledExtensions = with spicePkgs.extensions; [
       
     ];
-  }
+  };
 }
