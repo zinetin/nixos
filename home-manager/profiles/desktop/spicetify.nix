@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    spicetify-nix.homeManagerModules.spicetify
+    inputs.spicetify-nix.homeManagerModules.spicetify
   ];
 
   programs.spicetify = {
