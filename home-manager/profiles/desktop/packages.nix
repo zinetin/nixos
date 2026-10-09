@@ -28,7 +28,6 @@
     r2modman
     reaper
     shotcut
-    spotify
     steam
   ];
 

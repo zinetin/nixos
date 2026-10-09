@@ -33,6 +33,10 @@
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+    };
     
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -41,7 +45,7 @@
 
   };
   
-  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, zen-browser, ...} @inputs: {
 
 # Not WSL
     
