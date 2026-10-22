@@ -18,7 +18,13 @@
 
   hardware.keyboard.qmk.enable = true;
 
-  networking.wireless.iwd.enable = true;
+  networking = {
+    networkmanager = {
+      enable = true;
+      wifi.backend = "iwd";
+    };
+    wireless.iwd.enable = true;
+  };
 
   hardware.graphics = {
     enable = true;
