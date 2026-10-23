@@ -22,6 +22,8 @@
     nicotine-plus
     obs-studio
     obsidian
+    olympus
+    prismlauncher
     proton-vpn
     puddletag
     qbittorrent
@@ -29,11 +31,10 @@
     reaper
     shotcut
     steam
+    zoom
   ];
 
   services.flatpak.packages = [
-    "org.prismlauncher.PrismLauncher"
-    "io.github.everestapi.Olympus"
     "org.vinegarhq.Sober"
   ];
 
