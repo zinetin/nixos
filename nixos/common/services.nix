@@ -1,10 +1,13 @@
 {config, pkgs, ...}:
 
 {
+# This is here for some stuff to do with audio.
+  security.rtkit.enable = true;
   services = {
     pipewire = {
       enable = true;
       alsa.enable = true;
+      alsa.support32Bit = true;
       pulse.enable = true;
       wireplumber.enable = true;
     };
