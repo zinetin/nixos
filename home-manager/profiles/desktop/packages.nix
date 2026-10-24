@@ -17,7 +17,7 @@
     kdePackages.ffmpegthumbs
     kitty
     krita
-    libreoffice-qt6-still
+    libreoffice-qt-stable
     nicotine-plus
     obsidian
     olympus
