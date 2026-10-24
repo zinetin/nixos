@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     anki
-    audacity
     discord
     feishin
     feh
@@ -20,7 +19,6 @@
     krita
     libreoffice-qt-stable
     nicotine-plus
-    obs-studio
     obsidian
     olympus
     prismlauncher
