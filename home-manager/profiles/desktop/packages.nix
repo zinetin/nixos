@@ -31,7 +31,6 @@
     reaper
     shotcut
     steam
-    zoom
   ];
 
   programs = {
