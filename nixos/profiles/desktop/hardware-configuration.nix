@@ -18,13 +18,19 @@
 
   hardware.keyboard.qmk.enable = true;
 
+  systemd.services.NetworkManager = {
+    after = [ "iwd.service" ];
+    wants = [ "iwd.service" ];
+  };
   networking = {
     wireless.enable = false;
     networkmanager = {
       enable = true;
       wifi.backend = "iwd";
     };
-    wireless.iwd.enable = true;
+    wireless.iwd = {
+      enable = true;
+    };
   };
 
   hardware.graphics = {
