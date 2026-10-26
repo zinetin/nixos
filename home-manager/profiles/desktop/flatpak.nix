@@ -2,11 +2,11 @@
 
 {
   services.flatpak.overrides = {
-    "org.prismlauncher.PrismLauncher".Context = {
-      filesystems = [
-        "home"
-      ];
-    };
+#    "org.prismlauncher.PrismLauncher".Context = {
+#      filesystems = [
+#        "home"
+#      ];
+#    };
     "org.vinegarhq.Sober".Context = {
       filesystems = [
         "xdg-run/app/com.discordapp.Discord:create"

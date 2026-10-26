@@ -41,6 +41,7 @@
     graphics.enable = true;
     graphics.enable32Bit = true;
     nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
       open = false;
       modesetting.enable = true;
 
