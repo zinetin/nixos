@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, lib, ...}:
 
 let
   sddm-astronaut = (pkgs.sddm-astronaut.override {
@@ -7,6 +7,7 @@ let
 in 
 {
   environment.systemPackages = [ sddm-astronaut ];
+
   services.desktopManager.plasma6.enable = true;
 
   programs = {
@@ -25,12 +26,12 @@ in
     sddm = {
       enable = true;
       wayland.enable = true;
-      package = pkgs.kdePackages.sddm;
       extraPackages = with pkgs; [
         kdePackages.qtmultimedia
       ];
       theme = "sddm-astronaut-theme";
     };
+  };
 
 #  services.displayManager.ly = {
 #    enable = true;
