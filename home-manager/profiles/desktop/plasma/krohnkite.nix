@@ -86,10 +86,6 @@ in
       mute        = app "Mute"           "Meta+Ctrl+8" "pactl set-sink-mute @DEFAULT_SINK@ toggle";
       volDown     = app "Volume down"    "Meta+Ctrl+9" "pactl set-sink-volume @DEFAULT_SINK@ -2%";
       volUp       = app "Volume up"      "Meta+Ctrl+0" "pactl set-sink-volume @DEFAULT_SINK@ +2%";
-
-      # Screenshots
-      shotArea    = app "Screenshot area"            "Meta+Shift+S"      (saveCopy "-r");
-      shotScreen  = app "Screenshot screen"          "Print"             (saveCopy "-m");
     };
 
     shortcuts = {
