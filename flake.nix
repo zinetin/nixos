@@ -1,6 +1,5 @@
 {
   description = "My NixOS Flake Config";
-
   inputs = {
 
     dolphin-overlay = {
@@ -33,6 +32,12 @@
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
     };
+
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    }; 
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";

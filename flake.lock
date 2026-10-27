@@ -83,11 +83,11 @@
         "wallpapers": "wallpapers"
       },
       "locked": {
-        "lastModified": 1790539289,
-        "narHash": "sha256-qfbhiK4Ge/FMgA4qmJ7sjVxcw+cwjAZh1raPsNQzNwY=",
+        "lastModified": 1793103658,
+        "narHash": "sha256-pqJ5omfQjs7xgqZoDqAUEKRt7ccS59XuIAblukgzc/s=",
         "owner": "zinetin",
         "repo": "iridium",
-        "rev": "cfd5624df78b679c5b517ef19281dde1c3db525c",
+        "rev": "2983087ef1c20fd3d302bee67e9512063a295000",
         "type": "github"
       },
       "original": {

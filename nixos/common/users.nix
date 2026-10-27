@@ -7,7 +7,10 @@
     extraSpecialArgs = {inherit inputs; };
     users.zinetin = import ../../home-manager/users/zinetin/home.nix;
     users.iridium = import ../../home-manager/users/iridium/home.nix;
-    sharedModules = [ ../../home-manager/common/home.nix ];
+    sharedModules = [
+      ../../home-manager/common/home.nix
+      inputs.plasma-manager.homeModules.plasma-manager
+    ];
   };
 
   # No password for sudo
