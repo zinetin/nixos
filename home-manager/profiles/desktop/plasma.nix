@@ -2,8 +2,8 @@
 
 {
   imports = [
+    ./plasma/appearance.nix
     ./plasma/polonium.nix
-    ./plasma/workspace.nix
   ];
 
   home.packages = with pkgs.kdePackages; [

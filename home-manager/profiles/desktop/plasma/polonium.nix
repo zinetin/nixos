@@ -90,6 +90,11 @@ in
         "Window One Desktop to the Left"  = [ "Meta+Shift+Alt+Left"  "Meta+Shift+Alt+H" ];
         "Window One Desktop to the Right" = [ "Meta+Shift+Alt+Right" "Meta+Shift+Alt+L" ];
 
+        "Window to Next Screen" = "Meta+Shift+.";
+        "Window to Previous Screen" = "Meta+Shift+,";
+        "Switch to Next Screen" = "Meta+.";
+        "Switch to Previous Screen" = "Meta+,";
+
         # Polonium specific actions
         "polonium: Focus Left"  = [ "Meta+Left" "Meta+H" ];
         "polonium: Focus Right" = [ "Meta+Right" "Meta+L" ];
@@ -113,6 +118,10 @@ in
       plasmashell = {
         "manage activities" = "none";   # Meta+Q
       } // noTaskEntries;
+
+      org_kde_plasma_emojier = {
+        "Emoji Selector" = "Meta+;";
+      };
 
       ksmserver."Lock Session" = "Screensaver";  # drop Meta+L so Meta+L = focus right
     };
