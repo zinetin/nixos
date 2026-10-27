@@ -26,9 +26,6 @@ let
   shotDir = "$HOME/Pictures/Screenshots";
   stamp = "$(date +%Y%m%d-%H%M%S)";
 
-  saveCopy = mode:
-    "bash -c 'mkdir -p \"${shotDir}\"; spectacle -b ${mode} -c -o \"${shotDir}/${stamp}.png\"'";
-
   # ------------------------------------------------------- Krohnkite directions
   dirs = [
     { k = "Left";  arrow = "Left";  vim = "H"; size = "ShrinkWidth"; }
@@ -128,12 +125,6 @@ in
       } // noTaskEntries;
 
       ksmserver."Lock Session" = "Screensaver";  # drop Meta+L so Meta+L = focus right
-
-      # Free Spectacle's own Meta+Shift+S / Print for the commands above
-      "org.kde.spectacle.desktop" = {
-        RectangularRegionScreenShot = "none";
-        _launch = "none";
-      };
     };
   };
 }
