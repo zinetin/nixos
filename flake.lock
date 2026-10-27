@@ -263,6 +263,7 @@
         "nixpkgs": "nixpkgs_3",
         "plasma-manager": "plasma-manager",
         "spicetify-nix": "spicetify-nix",
+        "wallpapers": "wallpapers_2",
         "zen-browser": "zen-browser"
       }
     },
@@ -301,6 +302,21 @@
       }
     },
     "wallpapers": {
+      "locked": {
+        "lastModified": 1789813029,
+        "narHash": "sha256-VzS3ulNaE/aSG1wvb/KUg/IspdnPDNP84V7+FTat6ZQ=",
+        "owner": "zinetin",
+        "repo": "wallpapers",
+        "rev": "c5e44a410166002100885037892604049869359a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zinetin",
+        "repo": "wallpapers",
+        "type": "github"
+      }
+    },
+    "wallpapers_2": {
       "locked": {
         "lastModified": 1789813029,
         "narHash": "sha256-VzS3ulNaE/aSG1wvb/KUg/IspdnPDNP84V7+FTat6ZQ=",

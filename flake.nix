@@ -42,6 +42,10 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
     };
+
+    wallpapers = {
+      url = "github:zinetin/wallpapers";
+    };
     
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -50,7 +54,7 @@
 
   };
   
-  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, wallpapers, zen-browser, ...} @inputs: {
 
 # Not WSL
     
