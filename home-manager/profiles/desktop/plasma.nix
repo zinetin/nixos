@@ -1,6 +1,10 @@
 {pkgs, ...}:
 
 {
+  imports = [
+    ./plasma/krohnkite.nix
+  ];
+
   home.packages = with pkgs.kdePackages; [
     krohnkite
   ];
