@@ -119,8 +119,8 @@ in
         "manage activities" = "none";   # Meta+Q
       } // noTaskEntries;
 
-      org_kde_plasma_emojier = {
-        "Emoji Selector" = "Meta+;";
+      "org.kde.plasma.emojier.desktop" = {
+        "_launch" = "Meta+;";
       };
 
       ksmserver."Lock Session" = "Screensaver";  # drop Meta+L so Meta+L = focus right
