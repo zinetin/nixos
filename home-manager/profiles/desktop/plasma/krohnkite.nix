@@ -1,17 +1,8 @@
-# plasma-keybinds.nix
-# Hyprland keybinds.lua -> plasma-manager (+ Krohnkite).
-# Import from home.nix:  imports = [ ./plasma-keybinds.nix ];
-#
-# Untested. Action names were written from memory: verify with
-#   nix run github:nix-community/plasma-manager#rc2nix
-# and ~/.config/kglobalshortcutsrc if a binding does nothing.
 { lib, ... }:
 let
   desktops = lib.range 1 10;
   numKey = n: if n == 10 then "0" else toString n;
 
-  # Qt stores Shift+<digit> as the shifted symbol. This is the US layout;
-  # change it to match your keyboard.
   shifted = {
     "1" = "!"; "2" = "@"; "3" = "#"; "4" = "$"; "5" = "%";
     "6" = "^"; "7" = "&"; "8" = "*"; "9" = "("; "0" = ")";
@@ -57,9 +48,21 @@ let
 in
 {
   programs.plasma = {
-    kwin.virtualDesktops = {
-      number = 10;
-      rows = 1;
+    kwin = {
+      virtualDesktops = {
+        number = 10;
+        rows = 1;
+      };
+
+      scripts = {
+        krohnkite = {
+          enable = true;
+          settings = {
+            screenLayout = "continuous";
+            loopFocus = true;
+          };
+        };
+      };
     };
 
     # Super + left-drag = move, Super + right-drag = resize
@@ -104,12 +107,6 @@ in
         "Switch One Desktop to the Right" = [ "Meta+Alt+Right" "Meta+Alt+L" ];
         "Window One Desktop to the Left"  = [ "Meta+Shift+Alt+Left"  "Meta+Shift+Alt+H" ];
         "Window One Desktop to the Right" = [ "Meta+Shift+Alt+Right" "Meta+Shift+Alt+L" ];
-
-        # Multi-screen (from the Krohnkite tips)
-        "Switch to Next Screen"     = "Meta+.";
-        "Switch to Previous Screen" = "Meta+,";
-        "Window to Next Screen"     = "Meta+>";
-        "Window to Previous Screen" = "Meta+<";
 
         # Defaults that would shadow the binds above
         "Show Desktop" = "none";   # Meta+D

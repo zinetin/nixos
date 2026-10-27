@@ -4,7 +4,7 @@
   imports = [
     ../../common/configuration.nix
 
-    ./desktop-services.nix
+    ./services.nix
     ./display-manager.nix
     ./firewall.nix
     ./hardware-configuration.nix

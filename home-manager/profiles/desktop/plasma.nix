@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./plasma/krohnkite.nix
+    ./plasma/polonium.nix
+    ./plasma/workspace.nix
   ];
 
   home.packages = with pkgs.kdePackages; [
@@ -12,13 +13,5 @@
   programs.plasma = {
     enable = true;
     overrideConfig = true;
-
-    workspace = {
-      colorScheme = "BreezeDark";
-    };
-
-    configFile = {
-      kwinrc.Plugins.krohnkiteEnabled = true;
-    };
   };
 }
