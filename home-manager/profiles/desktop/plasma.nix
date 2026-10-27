@@ -3,11 +3,8 @@
 {
   imports = [
     ./plasma/appearance.nix
+    ./plasma/general.nix
     ./plasma/keybinds.nix
-  ];
-
-  home.packages = with pkgs.kdePackages; [
-    krohnkite
   ];
 
   programs.plasma = {

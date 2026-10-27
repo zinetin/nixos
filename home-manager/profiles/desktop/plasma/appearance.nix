@@ -7,6 +7,11 @@
       wallpaper = "${inputs.wallpapers.packages.${pkgs.stdenv.hostPlatform.system}.default}/paint-skyline.webp";
     };
 
+    configFile."kdeglobals"."WM" = {
+      "frame" = "61,174,233"; # Example: Breeze Blue
+      "inactiveFrame" = "239,240,241"; 
+    };
+
     kwin.effects.desktopSwitching.animation = "off";
     window-rules = [
       {
