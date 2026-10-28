@@ -90,8 +90,8 @@ in
         "Window One Desktop to the Left"  = [ "Meta+Shift+Alt+Left"  "Meta+Shift+Alt+H" ];
         "Window One Desktop to the Right" = [ "Meta+Shift+Alt+Right" "Meta+Shift+Alt+L" ];
 
-        "Window to Next Screen" = "Meta+Shift+.";
-        "Window to Previous Screen" = "Meta+Shift+,";
+        "Window to Next Screen" = "Meta+>";
+        "Window to Previous Screen" = "Meta+<";
         "Switch to Next Screen" = "Meta+.";
         "Switch to Previous Screen" = "Meta+,";
 

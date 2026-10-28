@@ -1,6 +1,10 @@
 {inputs, pkgs, ...}:
 
 {
+  home.packages = with pkgs; [
+    klassy
+  ];
+
   programs.plasma = {
     workspace = {
       colorScheme = "BreezeDark";
@@ -15,25 +19,29 @@
         };
       };
     };
-    
+
+    configFile = {
+      kdeglobals.KDE.AnimationDurationFactor = 0.5;
+    };
+
     kwin.effects.desktopSwitching.animation = "off";
-    window-rules = [
-      {
-        description = "Transparent or Borderless Windows Rule";
-        match = {
-          window-class = {
-            value = ".*";
-            type = "regex";
-          };
-          window-types = [ "normal" ];
-        };
-        apply = {
-          noborder = {
-            value = true;
-            apply = "force";
-          };
-        };
-      }
-    ];
+#    window-rules = [
+#      {
+#        description = "Transparent or Borderless Windows Rule";
+#        match = {
+#          window-class = {
+#            value = ".*";
+#            type = "regex";
+#          };
+#          window-types = [ "normal" ];
+#        };
+#        apply = {
+#          noborder = {
+#            value = true;
+#            apply = "force";
+#          };
+#        };
+#      }
+#    ];
   };
 }
