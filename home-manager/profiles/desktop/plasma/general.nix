@@ -6,15 +6,15 @@
     powerdevil = {
       AC = {
         autoSuspend.action = "nothing";
-        whenLaptopLidClosed = "nothing";
+        whenLaptopLidClosed = "doNothing";
       };
       battery = {
         autoSuspend.action = "nothing";
-        whenLaptopLidClosed = "nothing";
+        whenLaptopLidClosed = "doNothing";
       };
       lowBattery = {
         autoSuspend.action = "nothing";
-        whenLaptopLidClosed = "nothing";
+        whenLaptopLidClosed = "doNothing";
       };
     };
 

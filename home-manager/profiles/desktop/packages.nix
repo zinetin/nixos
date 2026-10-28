@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, inputs, ...}:
 
 {
   home.packages = with pkgs; [
@@ -38,6 +38,13 @@
         obs-pipewire-audio-capture
       ];
     };
+
+    craftapps = {
+      enable = true;
+      enableAll = true;
+      programs.figcraft.enable = false;
+      programs.cadcraft.enable = false;
+    }
   };
 
   services.flatpak.packages = [
