@@ -1,6 +1,9 @@
 {config, pkgs, inputs, ...}:
 
 {
+  imports = [
+  ];
+
   home.packages = with pkgs; [
     anki
     discord
@@ -42,9 +45,9 @@
     craftapps = {
       enable = true;
       enableAll = true;
-      programs.figcraft.enable = false;
-      programs.cadcraft.enable = false;
-    }
+      apps.figcraft.enable = false;
+      apps.cadcraft.enable = false;
+    };
   };
 
   services.flatpak.packages = [

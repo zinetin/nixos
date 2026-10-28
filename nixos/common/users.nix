@@ -10,6 +10,7 @@
     sharedModules = [
       ../../home-manager/common/home.nix
       inputs.plasma-manager.homeModules.plasma-manager
+      inputs.craftapps.homeManagerModules.default
     ];
   };
 

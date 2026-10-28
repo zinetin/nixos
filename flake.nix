@@ -7,8 +7,8 @@
 
     craftapps = {
       url = "github:olafkfreund/nix-craftapps";
-      inputs.nixpkgs.follows = "nixpkgs"
-    }
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     iridium = {
       url = "github:zinetin/iridium";
