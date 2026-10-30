@@ -11,14 +11,10 @@
 	  Experimental = true;
       };
     };
-    opentabletdriver.enable = true;
-    uinput.enable = true;
     keyboard.qmk.enable = true;
   };
 
   services.libinput.touchpad.disableWhileTyping = false;
-
-  boot.kernelModules = [ "uinput" ];
 
   networking = {
     wireless.enable = false;
