@@ -28,6 +28,12 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  fileSystems."/run/media/zinetin/Storage" = {
+    device = "/dev/disk/by-uuid/a6ca8479-47fd-49b1-b1ee-083047aa3b45";
+    fsType = "ext4";
+    options = [ "defaults" "nofail" ];
+  };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/2e37f059-2258-4966-ac4d-129708c10877"; }
     ];
