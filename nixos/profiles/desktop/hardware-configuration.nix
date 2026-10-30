@@ -12,11 +12,13 @@
       };
     };
     opentabletdriver.enable = true;
+    uinput.enable = true;
+    keyboard.qmk.enable = true;
   };
 
   services.libinput.touchpad.disableWhileTyping = false;
 
-  hardware.keyboard.qmk.enable = true;
+  boot.kernelModules = [ "uinput" ];
 
   networking = {
     wireless.enable = false;
