@@ -23,7 +23,7 @@
     libreoffice-qt-stable
     nicotine-plus
     obsidian
-    olympus
+    (olympus.override { celesteWrapper = "steam-run"; })
     prismlauncher
     proton-vpn
     puddletag
