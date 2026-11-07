@@ -1,13 +1,20 @@
 {
   description = "My NixOS Flake Config";
   inputs = {
-    dolphin-overlay = {
-      url = "github:rumboon/dolphin-overlay";
-    };
 
     craftapps = {
       url = "github:olafkfreund/nix-craftapps";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    cosmic-manager = {
+      url = "github:HeitorAugustoLN/cosmic-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
+    dolphin-overlay = {
+      url = "github:rumboon/dolphin-overlay";
     };
 
     iridium = {
@@ -58,7 +65,7 @@
 
   };
   
-  outputs = {self, dolphin-overlay, craftapps, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, wallpapers, zen-browser, ...} @inputs: {
+  outputs = {self, dolphin-overlay, craftapps, cosmic-manager, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, wallpapers, zen-browser, ...} @inputs: {
 
 # Not WSL
     

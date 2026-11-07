@@ -11,6 +11,21 @@ in
   services.desktopManager.plasma6.enable = true;
   services.desktopManager.cosmic.enable = true;
 
+# Hopefully get rid of animations in cosmic
+  nixpkgs.overlays = [
+    (final: prev: {
+     cosmic-comp = prev.cosmic-comp.overrideAttrs (oldAttrs: {
+         postPatch = ''
+         ${oldAttrs.postPatch or ""}
+         find src/shell -type f -name "*.rs" -exec sed -i \
+         's/Duration::from_millis([0-9]\+)/Duration::from_millis(1)/g' {} \;
+         sed -i 's/pub const SSD_HEIGHT: i32 = 36;/pub const SSD_HEIGHT: i32 = 0;/g' \
+         src/shell/element/window.rs
+         '';
+         });
+     })
+  ]
+
   programs = {
 #    hyprland.enable = true;
 
