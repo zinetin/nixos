@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
     anki
+    chromium
     discord
     feishin
     feh
@@ -24,6 +25,7 @@
     nicotine-plus
     obsidian
     (olympus.override { celesteWrapper = "steam-run"; })
+    osu-lazer-bin
     prismlauncher
     proton-vpn
     puddletag

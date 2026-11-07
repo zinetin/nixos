@@ -9,6 +9,7 @@ in
   environment.systemPackages = [ sddm-astronaut ];
 
   services.desktopManager.plasma6.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   programs = {
 #    hyprland.enable = true;
@@ -24,15 +25,16 @@ in
 
 
   services.displayManager = {
-    defaultSession = "plasma";
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      extraPackages = with pkgs; [
-        kdePackages.qtmultimedia
-      ];
-      theme = "sddm-astronaut-theme";
-    };
+    cosmic-greeter.enable = true;
+#    defaultSession = "plasma";
+#    sddm = {
+#      enable = true;
+#      wayland.enable = true;
+#      extraPackages = with pkgs; [
+#        kdePackages.qtmultimedia
+#      ];
+#      theme = "sddm-astronaut-theme";
+#    };
   };
 
 #  services.displayManager.ly = {
