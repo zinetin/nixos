@@ -2,6 +2,8 @@
   description = "My NixOS Flake Config";
   inputs = {
 
+    catppuccin.url = "github:catppuccin/nix";
+
     craftapps = {
       url = "github:olafkfreund/nix-craftapps";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,7 +67,7 @@
 
   };
   
-  outputs = {self, dolphin-overlay, craftapps, cosmic-manager, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, wallpapers, zen-browser, ...} @inputs: {
+  outputs = {self, catppuccin, craftapps, cosmic-manager, dolphin-overlay, iridium, home-manager, nix-flatpak, nixpkgs, nixos-wsl, spicetify-nix, wallpapers, zen-browser, ...} @inputs: {
 
 # Not WSL
     

@@ -1,26 +1,26 @@
-{...}:
+{inputs, pkgs, ...}:
 
 {
+  imports = [
+    inputs.catppuccin.homeManagerModules.catppuccin
+  ];
+
   home.packages = with pkgs; [
-    kvantum-themes
     papirus-icon-theme
   ];
 
+  catppuccin = {
+    enable = true;
+    autoEnable = true;
+    flavor = "mocha";
+    accent = "mauve";
+
+    kvantum.enable = true;
+  };
+  
   qt = {
     enable = true;
-    platformTheme.name = "qt6ct";
+    platformTheme.name = "qt5ct";
     style.name = "kvantum";
   };
-
-  
-  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
-    [General]
-    theme=KvLibadwaitaDark
-  '';
-
-  xdg.configFile."qt6ct/qt6ct.conf".text = ''
-    [Appearance]
-    icon_theme=Papirus-Dark
-    style=kvantum
-  '';
 }

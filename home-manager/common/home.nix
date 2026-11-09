@@ -4,7 +4,7 @@
   imports = [
     ./appearance.nix
     ./fish.nix
-    ./nv-chad.nix
+    ./nvchad.nix
     ./packages.nix
     ./git.nix
   ];
