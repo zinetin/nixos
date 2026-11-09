@@ -43,10 +43,10 @@ let
     (bind "Super+Alt+${k.key}"       (unit k.switch) "Workspace ${k.label}")
     (bind "Super+Shift+Alt+${k.key}" (unit k.move)   "Move window to ${k.label} workspace")
   ]) [
-    { key = "Left";  label = "previous"; switch = "PreviousWorkspace"; move = "MoveToPreviousWorkspace"; }
-    { key = "h";     label = "previous"; switch = "PreviousWorkspace"; move = "MoveToPreviousWorkspace"; }
-    { key = "Right"; label = "next";     switch = "NextWorkspace";     move = "MoveToNextWorkspace"; }
-    { key = "l";     label = "next";     switch = "NextWorkspace";     move = "MoveToNextWorkspace"; }
+    { key = "Left";  label = "Prev"; switch = "PreviousWorkspace"; move = "MoveToPreviousWorkspace"; }
+    { key = "h";     label = "Prev"; switch = "PreviousWorkspace"; move = "MoveToPreviousWorkspace"; }
+    { key = "Right"; label = "Next";     switch = "NextWorkspace";     move = "MoveToNextWorkspace"; }
+    { key = "l";     label = "Next";     switch = "NextWorkspace";     move = "MoveToNextWorkspace"; }
   ];
 in
 {
@@ -56,6 +56,7 @@ in
       (spawn "Super+w"        "Browser"        "zen-beta")
       (spawn "Super+Shift+w"  "virt-manager"   "virt-manager")
       (spawn "Super+e"        "Files"          "dolphin")
+      (spawn "Super+t"        "Terminal"       "kitty")
       (spawn "Super+m"        "Feishin"        "feishin")
       (spawn "Super+Ctrl+m"   "Spotify"        "spotify")
       (spawn "Super+y"        "Steam"          "steam")
@@ -71,9 +72,7 @@ in
       # ------------------------------------------------------------ windows
       (bind "Super+q"     (unit "Close")                "Close window")
       (bind "Super+f"     (unit "Fullscreen")           "Fullscreen")
-      (bind "Super+space" (unit "ToggleWindowFloating") "Toggle floating")
-      # Super+Y is now Steam, so tiling toggle moves here (cosmic default is Super+Y)
-      (bind "Super+Shift+y"     (unit "ToggleTiling")      "Toggle tiling")
+      (bind "Super+space" (unit "ToggleTiling") "Toggle floating")
       (bind "Super+Ctrl+space"  (unit "ToggleOrientation") "Toggle tiling orientation")
 
       # ------------------------------------------------------------ monitors

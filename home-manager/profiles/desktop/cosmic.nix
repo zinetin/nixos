@@ -9,5 +9,9 @@
     ./cosmic/keybinds.nix
   ];
 
-  wayland.desktopManager.cosmic.enable = true;
+  wayland.desktopManager.cosmic = {
+    enable = true;
+
+    resetFiles = true;
+  };
 }
