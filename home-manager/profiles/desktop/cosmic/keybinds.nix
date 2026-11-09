@@ -70,10 +70,12 @@ in
       (spawn "Super+Ctrl+0" "Volume up"      "pactl set-sink-volume @DEFAULT_SINK@ +2%")
 
       # ------------------------------------------------------------ windows
-      (bind "Super+q"     (unit "Close")                "Close window")
-      (bind "Super+f"     (unit "Fullscreen")           "Fullscreen")
-      (bind "Super+space" (unit "ToggleTiling") "Toggle floating")
-      (bind "Super+Ctrl+space"  (unit "ToggleOrientation") "Toggle tiling orientation")
+      (bind "Super+q"           (unit "Close")                  "Close window")
+      (bind "Super+f"           (unit "Fullscreen")             "Fullscreen")
+      (bind "Super+g"           (unit "ToggleWindowFloating")   "Toggle floating")
+      (bind "Super+Shift+g"     (unit "ToggleTiling")           "Toggle floating on all windows")
+      (bind "Super+Shift+f"     (unit "Maximize")               "Maximize window")
+      (bind "Super+Ctrl+space"  (unit "ToggleOrientation")      "Toggle tiling orientation")
 
       # ------------------------------------------------------------ monitors
       (bind "Super+period"      (tuple "SwitchOutput" [ (unit "Right") ]) "Focus next screen")

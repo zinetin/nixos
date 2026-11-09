@@ -12,13 +12,6 @@
     feh
     mupdf
     gedit
-    kdePackages.ark
-    kdePackages.dolphin
-    kdePackages.qtsvg
-    kdePackages.kio-fuse
-    kdePackages.kio-extras
-    kdePackages.kimageformats
-    kdePackages.ffmpegthumbs
     kitty
     krita
     libreoffice-qt-stable

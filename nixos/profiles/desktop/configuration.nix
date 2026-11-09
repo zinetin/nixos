@@ -4,10 +4,11 @@
   imports = [
     ../../common/configuration.nix
 
-    ./services.nix
+    ./appearance.nix
     ./display-manager.nix
     ./firewall.nix
     ./hardware-configuration.nix
+    ./services.nix
     ./users.nix
   ];
 

@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./appearance.nix
     ./cosmic.nix
     ./desktop-env.nix
     ./flatpak.nix
