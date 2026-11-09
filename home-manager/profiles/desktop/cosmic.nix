@@ -1,4 +1,4 @@
-{inputs, pkgs, ...}:
+{osConfig, lib, inputs, pkgs, ...}:
 
 {
   imports = [
@@ -10,7 +10,7 @@
   ];
 
   wayland.desktopManager.cosmic = {
-    enable = true;
+    enable = osConfig.desktop == "cosmic";
 
     resetFiles = true;
   };

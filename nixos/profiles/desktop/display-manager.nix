@@ -6,10 +6,12 @@ let
   });
 in 
 {
-  environment.systemPackages = [ sddm-astronaut ];
+  environment.systemPackages = [
+    sddm-astronaut
+  ];
 
-  services.desktopManager.plasma6.enable = true;
-  services.desktopManager.cosmic.enable = true;
+  services.desktopManager.plasma6.enable = config.desktop == "plasma";
+  services.desktopManager.cosmic.enable = config.desktop == "cosmic";
 
 # Hopefully get rid of animations in cosmic
   nixpkgs.overlays = [
@@ -34,22 +36,21 @@ in
 #      package = inputs.halley.packages.${pkgs.system}.halley-unstable;
 #    };
 
-    iridium.enable = true;
+    iridium.enable = config.desktop == "iridium";
   };
 
 
 
   services.displayManager = {
-    cosmic-greeter.enable = true;
-#    defaultSession = "plasma";
-#    sddm = {
-#      enable = true;
-#      wayland.enable = true;
-#      extraPackages = with pkgs; [
-#        kdePackages.qtmultimedia
-#      ];
-#      theme = "sddm-astronaut-theme";
-#    };
+    cosmic-greeter.enable = config.desktop == "cosmic";
+    sddm = {
+      enable = !(lib.elem config.desktop = ["cosmic"]);
+      wayland.enable = true;
+      extraPackages = with pkgs; [
+        kdePackages.qtmultimedia
+      ];
+      theme = "sddm-astronaut-theme";
+    };
   };
 
 #  services.displayManager.ly = {

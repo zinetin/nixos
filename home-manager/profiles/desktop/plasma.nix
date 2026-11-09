@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{osConfig, lib, pkgs, ...}:
 
 {
   imports = [
@@ -8,7 +8,7 @@
   ];
 
   programs.plasma = {
-    enable = true;
+    enable = osConfig.desktop == "plasma";
     overrideConfig = true;
   };
 }

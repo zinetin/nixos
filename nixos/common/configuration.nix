@@ -5,6 +5,7 @@
   imports = 
   [
     ./appearance.nix
+    ./opetions.nix
     ./packages.nix
     ./services.nix
     ./users.nix

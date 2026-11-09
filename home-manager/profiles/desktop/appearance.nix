@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   home.packages = with pkgs; [
@@ -14,8 +14,6 @@
     autoEnable = true;
     flavor = "mocha";
     accent = "mauve";
-
-    kvantum.enable = true;
   };
   
   qt = {

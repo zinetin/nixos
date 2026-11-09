@@ -10,10 +10,12 @@
     kdePackages.kio-fuse
     kdePackages.kio-extras
     kdePackages.kimageformats
+    kdePackages.kService
     kdePackages.ffmpegthumbs
-    kdePackages.qt6ct               # The Qt6 Configuration Tool middleware
+    kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtsvg
+    libsForQt5.qtstyleplugin-kvantum
     ly
     os-prober
   ];
