@@ -24,7 +24,7 @@ in
          '';
          });
      })
-  ]
+  ];
 
   programs = {
 #    hyprland.enable = true;
