@@ -44,7 +44,7 @@ in
   services.displayManager = {
     cosmic-greeter.enable = config.desktop == "cosmic";
     sddm = {
-      enable = !(lib.elem config.desktop = ["cosmic"]);
+      enable = !(lib.elem config.desktop ["cosmic"]);
       wayland.enable = true;
       extraPackages = with pkgs; [
         kdePackages.qtmultimedia

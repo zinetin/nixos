@@ -3,7 +3,7 @@
 {
   options = {
     desktop = lib.mkOption {
-      type = lib.types.enum [ "cosmic", "plasma", "halley", "iridium" ]
+      type = lib.types.enum [ "cosmic" "plasma" "halley" "iridium" ];
       default = "cosmic";
     };
   };

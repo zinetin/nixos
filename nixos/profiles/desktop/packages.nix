@@ -19,4 +19,8 @@
     ly
     os-prober
   ];
+
+  fonts.packages = with pkgs; [
+    poppins
+  ];
 }
