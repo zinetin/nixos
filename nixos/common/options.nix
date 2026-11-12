@@ -3,7 +3,7 @@
 {
   options = {
     desktop = lib.mkOption {
-      type = lib.types.enum [ "cosmic" "plasma" "halley" "iridium" ];
+      type = lib.types.enum [ "cosmic" "plasma" "halley" "iridium" "cinnamon" ];
       default = "cosmic";
     };
   };
@@ -12,5 +12,9 @@
     specialisation.plasma.configuration = {
       desktop = lib.mkForce "plasma";
     };
+    specialisation.plasma.configuration = {
+      desktop = lib.mkForce "cinnamon";
+    };
+
   };
 }

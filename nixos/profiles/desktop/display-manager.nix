@@ -13,6 +13,11 @@ in
   services.desktopManager.plasma6.enable = config.desktop == "plasma";
   services.desktopManager.cosmic.enable = config.desktop == "cosmic";
 
+  services = {
+    xserver.enable = true;
+    xserver.desktopManager.cinnamon.enable = config.desktop == "cinnamon";
+  }
+
 # Hopefully get rid of animations in cosmic
   nixpkgs.overlays = [
     (final: prev: {
