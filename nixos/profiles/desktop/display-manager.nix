@@ -15,8 +15,9 @@ in
 
   services = {
     xserver.enable = true;
+    xserver.libinput.enable = true;
     xserver.desktopManager.cinnamon.enable = config.desktop == "cinnamon";
-  }
+  };
 
 # Hopefully get rid of animations in cosmic
   nixpkgs.overlays = [
@@ -50,7 +51,7 @@ in
     cosmic-greeter.enable = config.desktop == "cosmic";
     sddm = {
       enable = !(lib.elem config.desktop ["cosmic"]);
-      wayland.enable = true;
+      wayland.enable = lib.elem config.desktop ["plasma" "iridium"];
       extraPackages = with pkgs; [
         kdePackages.qtmultimedia
       ];

@@ -12,7 +12,7 @@
     specialisation.plasma.configuration = {
       desktop = lib.mkForce "plasma";
     };
-    specialisation.plasma.configuration = {
+    specialisation.cinnamon.configuration = {
       desktop = lib.mkForce "cinnamon";
     };
 
