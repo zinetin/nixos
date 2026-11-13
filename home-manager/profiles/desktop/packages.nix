@@ -47,6 +47,7 @@
 
   services.flatpak.packages = [
     "org.vinegarhq.Sober"
+    "com.jaquadro.NBTExplorer"
   ];
 
   # Default applications to open stuff

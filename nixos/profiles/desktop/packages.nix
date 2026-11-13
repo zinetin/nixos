@@ -13,7 +13,6 @@
     kdePackages.kService
     kdePackages.ffmpegthumbs
     kdePackages.qt6ct
-    kdePackages.qtmultimedia
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtsvg
     libsForQt5.qtstyleplugin-kvantum

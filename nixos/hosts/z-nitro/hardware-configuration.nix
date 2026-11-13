@@ -42,7 +42,7 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # nvidia
-  services.xserver.videoDrivers = [ "modesetting" "nvidia"];
+  services.xserver.videoDrivers = [ "nvidia"];
   hardware = {
     graphics.enable = true;
     graphics.enable32Bit = true;
@@ -52,8 +52,9 @@
       modesetting.enable = true;
 
       prime = {
-        offload.enable = true;
-        offload.enableOffloadCmd = true;
+        offload.enable = false;
+        offload.enableOffloadCmd = false;
+        sync.enable = true;
 
         intelBusId = "PCI:0@0:2:0";
         nvidiaBusId = "PCI:1@0:0:0";

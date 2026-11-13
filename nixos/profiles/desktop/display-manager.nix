@@ -15,7 +15,7 @@ in
 
   services = {
     xserver.enable = true;
-    xserver.libinput.enable = true;
+    libinput.enable = true;
     xserver.desktopManager.cinnamon.enable = config.desktop == "cinnamon";
   };
 
@@ -51,7 +51,7 @@ in
     cosmic-greeter.enable = config.desktop == "cosmic";
     sddm = {
       enable = !(lib.elem config.desktop ["cosmic"]);
-      wayland.enable = lib.elem config.desktop ["plasma" "iridium"];
+      wayland.enable = true;
       extraPackages = with pkgs; [
         kdePackages.qtmultimedia
       ];
