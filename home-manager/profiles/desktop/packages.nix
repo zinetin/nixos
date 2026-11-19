@@ -12,6 +12,7 @@
     feh
     mupdf
     gedit
+    kdePackages.dolphin
     kitty
     krita
     libreoffice-qt-stable
