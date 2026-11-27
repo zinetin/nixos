@@ -20,6 +20,7 @@
     obsidian
     (olympus.override { celesteWrapper = "steam-run"; })
     osu-lazer-bin
+    pavucontrol
     prismlauncher
     proton-vpn
     puddletag

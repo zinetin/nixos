@@ -50,7 +50,16 @@
       };
     };
 
-    nix-ld.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        libxi libxtst libxrender libx11
+        libxcursor libxrandr libxxf86vm
+        libGL openal libpulseaudio alsa-lib udev
+
+        freetype fontconfig zlib
+      ];
+    };
 
     fuse = {
       enable = true;

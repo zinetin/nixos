@@ -1,4 +1,4 @@
-{inputs, pkgs, ...}:
+{osConfig, lib, inputs, pkgs, ...}:
 
 {
   imports = [
@@ -14,9 +14,10 @@
     autoEnable = true;
     flavor = "mocha";
     accent = "mauve";
+    kvantum.enable = !(osConfig.desktop == "plasma");
   };
   
-  qt = {
+  qt = lib.mkIf (!(osConfig.desktop == "plasma")) {
     enable = true;
     platformTheme.name = "qt5ct";
     style.name = "kvantum";
